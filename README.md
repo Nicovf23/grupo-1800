@@ -5,8 +5,3 @@ El proyecto contempla el diseño y fabricación de un chasis propio, la integrac
 Para el diseño y desarrollo se utilizarán herramientas especializadas como FreeCAD, para el modelado tridimensional del chasis y sus componentes mecánicos; KiCad, para el diseño de esquemáticos y placas de circuito impreso; Qucs-S, para la simulación y el análisis de circuitos electrónicos; y OpenModelica, para el modelado y la simulación de sistemas dinámicos.
 El enfoque principal será desarrollar un vehículo competitivo para carreras en circuitos de pista, aplicando principios de ingeniería mecánica, electrónica, programación y microcontroladores. Se buscará optimizar cada componente para obtener un equilibrio entre potencia, control, estabilidad y rendimiento, mediante un proceso continuo de diseño, fabricación, pruebas y ajustes.
  
-       Integrantes
-Oscar Nicolas Venegas Fernandez — 2022-2006
-Avismael González Bautista — 2024-0562
-Victor Sebastian Tavarez Ramirez — 2024-2227
-Deury Reyes Rosa — 2023-1556
