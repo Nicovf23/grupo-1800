@@ -1,1 +1,12 @@
-# grupo-1800
+# grupo-DON JULIO 
+Proyecto Carrito Don Julio
+El proyecto Carrito Don Julio consiste en el diseño y desarrollo de un vehículo eléctrico a escala, controlado por radio (RC), orientado al automodelismo de competición en pista para adultos. El objetivo es construir un vehículo desde cero, con un diseño enfocado en el alto rendimiento, la precisión de conducción y las exigencias técnicas de las carreras RC.
+El proyecto contempla el diseño y fabricación de un chasis propio, la integración de un sistema de propulsión 100 % eléctrico, el desarrollo de circuitos electrónicos con componentes SMD (Surface-Mount Device) y la implementación de sistemas de control. Cada elemento será diseñado y seleccionado considerando factores como la velocidad, la aceleración, la estabilidad, la distribución del peso y la eficiencia energética.
+Para el diseño y desarrollo se utilizarán herramientas especializadas como FreeCAD, para el modelado tridimensional del chasis y sus componentes mecánicos; KiCad, para el diseño de esquemáticos y placas de circuito impreso; Qucs-S, para la simulación y el análisis de circuitos electrónicos; y OpenModelica, para el modelado y la simulación de sistemas dinámicos.
+El enfoque principal será desarrollar un vehículo competitivo para carreras en circuitos de pista, aplicando principios de ingeniería mecánica, electrónica, programación y microcontroladores. Se buscará optimizar cada componente para obtener un equilibrio entre potencia, control, estabilidad y rendimiento, mediante un proceso continuo de diseño, fabricación, pruebas y ajustes.
+ 
+       Integrantes
+Oscar Nicolas Venegas Fernandez — 2022-2006
+Avismael González Bautista — 2024-0562
+Victor Sebastian Tavarez Ramirez — 2024-2227
+Deury Reyes Rosa — 2023-1556
