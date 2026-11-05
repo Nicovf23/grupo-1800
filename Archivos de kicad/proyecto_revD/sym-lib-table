@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CDJ")(type "KiCad")(uri "${KIPRJMOD}/CDJ.kicad_sym")(options "")(descr "Carrito Don Julio"))
+)
