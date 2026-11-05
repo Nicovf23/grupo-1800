@@ -11,7 +11,7 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 
 | Verificación | Herramienta | Resultado |
 |---|---|---|
-| Netlist del esquemático contra el diseño fuente, pin por pin | `scripts/verify_d.py` + netlist de `kicad-cli` | **575 de 575 pines correctos**, sin redes fusionadas |
+| Netlist del esquemático contra la lista de conexiones del diseño, pin por pin | Netlist exportada con `kicad-cli` | **575 de 575 pines correctos**, sin redes fusionadas |
 | ERC (reglas eléctricas del esquemático) | `kicad-cli sch erc` | **0 errores.** 2 avisos esperados: pines de la IMU atados a GND a propósito |
 | Paridad esquemático ↔ PCB | `kicad-cli pcb drc --schematic-parity` | **0 diferencias** |
 | Separaciones, cortos y bordes en la PCB | `kicad-cli pcb drc` | **0 errores de separación ni cortos** |
@@ -62,5 +62,5 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 - [ ] Confirmar el inductor del AP63203 y la variante del BQ76930
 - [ ] Revisión del diseño por el profesor o un tercero
 - [ ] Ajustar el tamaño de la placa al chasis
-- [ ] Regenerar los archivos de fabricación (`scripts/fab.sh`) y cambiar el estado a "candidato a producción"
+- [ ] Regenerar los archivos de fabricación y cambiar el estado a "candidato a producción"
 - [ ] Prototipo: pruebas de alimentación, carga (con batería de prueba y supervisión), comunicación I2C y salidas

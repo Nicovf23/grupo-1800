@@ -29,7 +29,6 @@
 | `fabricacion_PRELIMINAR/` | Gerbers, taladros, BOM, posiciones (CPL) y modelo STEP. **Preliminares, no fabricar** |
 | `documentacion/` | Esquemático en PDF, vista 3D, BOM clasificada (A/B/C), mapa de pines del DevKit, instrucciones |
 | `reportes/` | Informes ERC, DRC y verificación de la netlist |
-| `scripts/` | Scripts Python que generan el esquemático y la PCB desde el diseño fuente |
 | `AUDITORIA.md` | Qué está verificado, qué no, y qué falta para producción |
 | `NOTAS_DISENO.md` | Decisiones de diseño, supuestos y cálculos |
 
@@ -37,7 +36,3 @@
 
 1. Abrir `proyecto_revD/cdj_revD.kicad_pro` con KiCad 9.
 2. La librería `CDJ` se carga sola desde la carpeta del proyecto (`sym-lib-table` y `fp-lib-table`).
-
-## Fuente única del diseño
-
-El esquemático y la PCB se generan desde `scripts/design_d.py`, que es la lista de componentes y conexiones. Si se edita a mano en KiCad, ese archivo deja de estar sincronizado.

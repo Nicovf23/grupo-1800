@@ -1,7 +1,7 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
 	(uuid "19b5cbfb-e471-4a35-99d0-517f7c65bad2")
 	(paper "A1")
-	(title_block (title "Placa principal Carrito Don Julio (6S, DevKit V1)") (company "Carrito Don Julio") (rev "D") (comment 1 "Generado desde design_d.py - verificado contra netlist"))
+	(title_block (title "Placa principal Carrito Don Julio (6S, DevKit V1)") (company "Carrito Don Julio") (rev "D") (comment 1 "En desarrollo - no es version de produccion"))
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
