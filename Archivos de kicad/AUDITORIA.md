@@ -22,7 +22,7 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 
 | # | Problema | Impacto | Cómo resolver |
 |---|---|---|---|
-| 1 | **3 conexiones sin rutear** junto a U5 (BQ25756): VBUS, CHG_TS y CHG_DRV | La placa no funcionaría | Rutear a mano en KiCad con el router "Empujar". Coordenadas en `documentacion/LEEME_ANTES_DE_FABRICAR.txt` |
+| 1 | **1 conexión sin rutear** junto a U5 (BQ25756): CHG_SW1, pin 28 | La placa no funcionaría | Rutear a mano en KiCad con el router "Empujar". Coordenadas en `documentacion/LEEME_ANTES_DE_FABRICAR.txt` |
 | 2 | **Plano de GND en In1 fragmentado**: el autorouter usó In1 para señales | Más ruido para la IMU y el ADC. B.Cu sí tiene GND casi continuo | Reubicar componentes del cargador y volver a rutear con In1 reservado, o rutear a mano |
 | 3 | **Orden de pines del DevKit V1 sin verificar físicamente** | Si el clon difiere, conexiones cruzadas | Comparar la serigrafía del DevKit real con `documentacion/PINES_DEVKIT_revD.csv` |
 | 4 | **Ancho entre filas del DevKit desconocido** (22.86 o 25.4 mm según el clon) | El zócalo no encaja | La huella trae ambas filas; medir el DevKit real y soldar en la fila correcta |
@@ -73,6 +73,14 @@ Se elige **BQ7693002DBTR**:
 - Tiene stock en LCSC (C2871830).
 - Su pinout es idéntico al de la BQ7693003.
 
+### Congestión alrededor del cargador: de 3 conexiones pendientes a 1
+
+Se reubicaron los componentes del cargador con 4 mm de holgura alrededor del BQ25756 y más separación entre sus pasivos, y se volvió a rutear. Quedan 436 − 1 conexiones ruteadas, sin errores de separación.
+
+### Inductor del cargador (L2): IHLP4040DZER100M5A
+
+El inductor del cargador pasó del IHLP-6767 (17 × 17 mm) al Vishay IHLP4040DZER100M5A (10 µH, 6.5 A, DCR 30.9 mΩ, LCSC C511353), de unos 10 × 10 mm. Con 3 A de entrada y 2 A de carga, el pico de corriente en el inductor ronda 3.5 A, por debajo de los 6.5 A nominales. Pérdida en el DCR: unos 0.28 W a 3 A.
+
 ## 5. Fuera del alcance de esta revisión
 
 - **Firmware:** no escrito. Modo Sport, curvas de acelerador, failsafe y comunicación con el cargador, el monitor y la IMU quedan pendientes.
@@ -83,11 +91,13 @@ Se elige **BQ7693002DBTR**:
 ## 6. Avisos de DRC aceptados (no afectan el funcionamiento)
 
 - Serigrafía superpuesta o sobre cobre (cosmético).
-- 5 alivios térmicos con un solo radio en pads de GND.
+- 7 vías sobrantes (agujeros sin conexión eléctrica; se pueden borrar en KiCad).
+- 2 tramos de 0.1 mm en CHG_DRV (< 1 mm de largo; dentro de la capacidad de JLCPCB, 0.09 mm).
+- 7 alivios térmicos con un solo radio en pads de GND.
 
 ## 7. Checklist para pasar a producción
 
-- [ ] Rutear las 3 conexiones pendientes y obtener DRC con 0 "sin conectar"
+- [ ] Rutear la conexión pendiente (CHG_SW1) y obtener DRC con 0 "sin conectar"
 - [ ] Revisar o mejorar el plano GND de In1
 - [ ] Verificar el pinout y el ancho del DevKit real
 - [x] Verificar el inductor del AP63203 (ver sección 4)

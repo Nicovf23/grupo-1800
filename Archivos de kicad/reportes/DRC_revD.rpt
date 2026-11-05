@@ -1,19 +1,28 @@
 ** Drc report for cdj_revD.kicad_pcb **
-** Created on 2026-11-05T17:11:08-0400 **
+** Created on 2026-11-05T19:26:03-0400 **
 
-** Found 135 DRC violations **
-[silk_edge_clearance]: Serigrafía recortada por el borde de la placa
-    Regla: board setup constraints silk; warning
-    @(0.0000 mm, 0.0000 mm): Segmento en Edge.Cuts
-    @(70.3333 mm, 0.3250 mm): Reference field of Q4
-[silk_edge_clearance]: Serigrafía recortada por el borde de la placa
-    Regla: board setup constraints silk; warning
-    @(0.0000 mm, 0.0000 mm): Segmento en Edge.Cuts
-    @(76.0000 mm, 0.4700 mm): Reference field of R22
-[silk_edge_clearance]: Serigrafía recortada por el borde de la placa
-    Regla: board setup constraints silk; warning
-    @(0.0000 mm, 0.0000 mm): Segmento en Edge.Cuts
-    @(14.0000 mm, -0.1450 mm): Reference field of J3
+** Found 90 DRC violations **
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(46.7982 mm, 57.7312 mm): Vía [/AFE_BAT] en F.Cu - B.Cu
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(46.5393 mm, 56.0440 mm): Vía [/AFE_BOOT_K] en F.Cu - B.Cu
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(52.2406 mm, 8.8706 mm): Vía [/CHG_ICHG] en F.Cu - B.Cu
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(54.7467 mm, 15.0016 mm): Vía [/CHG_SW2] en F.Cu - B.Cu
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(37.6309 mm, 15.7916 mm): Vía [/CHG_STAT2_K] en F.Cu - B.Cu
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(97.5445 mm, 74.3680 mm): Vía [/SERVO_SIG_B] en F.Cu - B.Cu
+[via_dangling]: La vía no está conectada o está conectada en una sola capa
+    Anulación local; warning
+    @(85.5886 mm, 94.5570 mm): Vía [/LT_SPORT_IN] en F.Cu - B.Cu
 [silk_edge_clearance]: Serigrafía recortada por el borde de la placa
     Regla: board setup constraints silk; warning
     @(0.0000 mm, 0.0000 mm): Segmento en Edge.Cuts
@@ -21,384 +30,210 @@
 [silk_edge_clearance]: Serigrafía recortada por el borde de la placa
     Regla: board setup constraints silk; warning
     @(0.0000 mm, 0.0000 mm): Segmento en Edge.Cuts
-    @(52.2278 mm, 0.1944 mm): Reference field of C24
-[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In2.Cu; zona recuento mínimo de radios 2; 1 real)
-    Anulación local; error
-    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In2.Cu
-    @(91.5000 mm, 94.4500 mm): Pad PTH 2 [/GND] de J16
+    @(14.0000 mm, -0.1450 mm): Reference field of J3
 [starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In2.Cu; 2 radios conectados a una isla aislada)
     Anulación local; error
     @(0.5000 mm, 0.5000 mm): Zona [/GND] en In2.Cu
-    @(102.0000 mm, 47.3200 mm): Pad PTH 14 [/GND] de U4
-[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In1.Cu; 2 radios conectados a una isla aislada)
-    Anulación local; error
-    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In1.Cu
-    @(91.0000 mm, 76.5400 mm): Pad PTH 3 [/GND] de J10
+    @(76.5000 mm, 84.9500 mm): Pad PTH 2 [/GND] de J14
 [starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In1.Cu; zona recuento mínimo de radios 2; 1 real)
     Anulación local; error
     @(0.5000 mm, 0.5000 mm): Zona [/GND] en In1.Cu
-    @(90.0000 mm, 59.4500 mm): Pad PTH 2 [/GND] de J19
-[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa B.Cu; zona recuento mínimo de radios 2; 1 real)
+    @(68.8450 mm, 4.6000 mm): Pad PTH 2 [/GND] de J4
+[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In2.Cu; 2 radios conectados a una isla aislada)
     Anulación local; error
-    @(0.5000 mm, 0.5000 mm): Zona [/GND] en B.Cu
-    @(71.0000 mm, 21.1000 mm): Pad PTH 2 [/GND] de J4
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(90.5000 mm, 91.5500 mm): Reference field of J16
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(41.5000 mm, 91.0500 mm): Reference field of J5
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(96.0250 mm, 92.0025 mm): Reference field of R56
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(56.8000 mm, 32.0422 mm): Reference field of C36
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(85.7625 mm, 84.0750 mm): Reference field of R59
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(35.5200 mm, 21.5700 mm): Reference field of D8
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(68.5926 mm, 16.1793 mm): Reference field of C21
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(51.8750 mm, 52.5575 mm): Reference field of C15
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(66.5000 mm, 32.7200 mm): Reference field of R30
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(118.0000 mm, 59.5800 mm): Reference field of J9
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(117.6625 mm, 57.3512 mm): Reference field of R41
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(34.0200 mm, 29.5700 mm): Reference field of D10
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(46.5391 mm, 67.1552 mm): Reference field of C8
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(77.1481 mm, 7.2515 mm): Reference field of C20
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(127.0000 mm, 85.5700 mm): Reference field of C52
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(37.5000 mm, 29.8520 mm): Reference field of TP1
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(55.3750 mm, 62.0575 mm): Reference field of TH1
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(49.5225 mm, 91.0000 mm): Reference field of D11
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(47.9063 mm, 64.7690 mm): Reference field of C7
+    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In2.Cu
+    @(91.5000 mm, 94.4500 mm): Pad PTH 2 [/GND] de J16
+[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In2.Cu; zona recuento mínimo de radios 2; 1 real)
+    Anulación local; error
+    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In2.Cu
+    @(113.0000 mm, 65.4500 mm): Pad PTH 4 [/GND] de J6
+[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In2.Cu; zona recuento mínimo de radios 2; 1 real)
+    Anulación local; error
+    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In2.Cu
+    @(76.5000 mm, 91.4500 mm): Pad PTH 2 [/GND] de J15
+[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In1.Cu; zona recuento mínimo de radios 2; 1 real)
+    Anulación local; error
+    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In1.Cu
+    @(124.8600 mm, 47.3200 mm): Pad PTH 29 [/GND] de U4
+[starved_thermal]: Conexión de alivio térmico a la zona incompleta (capa In2.Cu; zona recuento mínimo de radios 2; 1 real)
+    Anulación local; error
+    @(0.5000 mm, 0.5000 mm): Zona [/GND] en In2.Cu
+    @(84.0000 mm, 90.4500 mm): Pad PTH 2 [/GND] de J13
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
     @(42.9204 mm, 68.5245 mm): Reference field of C6
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(122.1625 mm, 64.1012 mm): Reference field of R43
+    @(47.9063 mm, 64.7690 mm): Reference field of C7
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(70.0000 mm, 56.8000 mm): Reference field of U6
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(76.5000 mm, 32.2200 mm): Reference field of R29
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(73.8333 mm, 25.9750 mm): Reference field of C32
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(53.2500 mm, 25.8950 mm): Reference field of R34
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(68.4750 mm, 29.5200 mm): Reference field of R24
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(78.1667 mm, 26.0533 mm): Reference field of R33
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(69.1250 mm, 26.9404 mm): Reference field of C30
+    @(46.5391 mm, 67.1552 mm): Reference field of C8
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
     @(125.2438 mm, 61.3669 mm): Reference field of R44
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(54.5000 mm, 28.2200 mm): Reference field of R38
+    @(120.5996 mm, 55.4969 mm): Reference field of D20
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(55.0000 mm, 34.2200 mm): Reference field of R32
+    @(85.7625 mm, 84.0750 mm): Reference field of R59
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(97.5000 mm, 19.0700 mm): Reference field of R39
+    @(90.5000 mm, 91.5500 mm): Reference field of J16
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
     @(42.7500 mm, 88.8200 mm): Reference field of R73
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(98.7625 mm, 94.0862 mm): Reference field of R51
+    @(51.8750 mm, 52.5575 mm): Reference field of C15
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(72.9500 mm, 32.1756 mm): Reference field of C37
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(56.5000 mm, 3.7200 mm): Reference field of R27
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(125.6625 mm, 66.6012 mm): Reference field of R47
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(75.0000 mm, 10.3200 mm): Reference field of U5
-[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
-    Anulación local; warning
-    @(63.0000 mm, 27.4750 mm): Reference field of C33
+    @(49.5225 mm, 91.0000 mm): Reference field of D11
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
     @(59.2450 mm, 62.0750 mm): Reference field of R14
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(52.9583 mm, 3.2700 mm): Reference field of C28
+    @(125.6625 mm, 66.6012 mm): Reference field of R47
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(120.5996 mm, 55.4969 mm): Reference field of D20
+    @(98.7625 mm, 94.0862 mm): Reference field of R51
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
+    @(97.5000 mm, 19.0700 mm): Reference field of R39
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
+    @(118.0000 mm, 59.5800 mm): Reference field of J9
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
     @(38.9375 mm, 74.4804 mm): Reference field of R5
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
+    @(122.1625 mm, 64.1012 mm): Reference field of R43
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
+    @(127.0000 mm, 85.5700 mm): Reference field of C52
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
+    @(41.5000 mm, 91.0500 mm): Reference field of J5
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
     @(51.7450 mm, 54.5750 mm): Reference field of R12
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(76.0000 mm, 2.7200 mm): Reference field of R21
+    @(55.3750 mm, 62.0575 mm): Reference field of TH1
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
-    @(70.0000 mm, 18.2000 mm): Reference field of J4
+    @(70.0000 mm, 56.8000 mm): Reference field of U6
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
+    @(96.0250 mm, 92.0025 mm): Reference field of R56
 [silk_over_copper]: Serigrafía recortada por la máscara del soldadura
     Anulación local; warning
     @(94.5000 mm, 79.0700 mm): Reference field of C54
+[silk_over_copper]: Serigrafía recortada por la máscara del soldadura
+    Anulación local; warning
+    @(117.6625 mm, 57.3512 mm): Reference field of R41
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(46.0125 mm, 95.1500 mm): Segmento of D11 on F.Silkscreen
-    @(47.8333 mm, 95.4833 mm): Reference field of C45
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(37.3400 mm, 86.5600 mm): Segmento of L1 on F.Silkscreen
-    @(37.5000 mm, 86.6500 mm): Reference field of C44
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(37.5000 mm, 86.6500 mm): Reference field of C44
-    @(37.3400 mm, 86.5600 mm): Segmento of L1 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(41.8594 mm, 88.5100 mm): Segmento of C43 on F.Silkscreen
-    @(42.7500 mm, 88.8200 mm): Reference field of R73
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(42.0000 mm, 86.5700 mm): Reference field of C43
-    @(37.3400 mm, 86.5600 mm): Segmento of L1 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(57.1250 mm, 58.8875 mm): Reference field of C11
-    @(57.8750 mm, 58.5600 mm): Segmento of U1 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(57.8750 mm, 58.5600 mm): Segmento of U1 on F.Silkscreen
-    @(57.1250 mm, 58.8875 mm): Reference field of C11
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(67.5125 mm, 86.3362 mm): Reference field of R61
-    @(65.3354 mm, 86.1762 mm): Segmento of R52 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(67.5125 mm, 90.8362 mm): Reference field of R63
-    @(65.3354 mm, 90.6762 mm): Segmento of R61 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(51.8955 mm, 88.0950 mm): Reference field of D12
-    @(52.4544 mm, 88.1100 mm): Segmento of C46 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(49.8125 mm, 91.0000 mm): Segmento of D12 on F.Silkscreen
-    @(49.5225 mm, 91.0000 mm): Reference field of D11
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(45.2849 mm, 57.5345 mm): Segmento of D2 on F.Silkscreen
     @(45.2993 mm, 59.7863 mm): Reference field of C10
+    @(45.2849 mm, 57.5345 mm): Segmento of D2 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
     @(45.2849 mm, 59.5345 mm): Segmento of D2 on F.Silkscreen
     @(45.2993 mm, 59.7863 mm): Reference field of C10
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(51.8955 mm, 88.0950 mm): Reference field of D12
-    @(51.3900 mm, 87.0456 mm): Segmento of C46 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
     @(41.2002 mm, 74.2662 mm): Segmento of R6 on F.Silkscreen
     @(42.6313 mm, 74.7381 mm): Reference field of R10
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(90.5000 mm, 91.5500 mm): Reference field of J16
-    @(91.5250 mm, 91.4450 mm): Segmento of U14 on F.Silkscreen
+    @(41.8594 mm, 88.5100 mm): Segmento of C43 on F.Silkscreen
+    @(42.7500 mm, 88.8200 mm): Reference field of R73
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(99.5250 mm, 91.9450 mm): Segmento of U13 on F.Silkscreen
-    @(99.7625 mm, 92.0750 mm): Reference field of R58
+    @(47.8333 mm, 95.4833 mm): Reference field of C45
+    @(46.0125 mm, 95.1500 mm): Segmento of D11 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(99.5250 mm, 91.9450 mm): Segmento of U13 on F.Silkscreen
-    @(99.7625 mm, 92.0750 mm): Reference field of R58
+    @(37.5000 mm, 86.6500 mm): Reference field of C44
+    @(37.3400 mm, 86.5600 mm): Segmento of L1 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(98.7625 mm, 94.0862 mm): Reference field of R51
-    @(99.5252 mm, 94.0275 mm): Segmento of R58 on F.Silkscreen
+    @(42.0000 mm, 86.5700 mm): Reference field of C43
+    @(37.3400 mm, 86.5600 mm): Segmento of L1 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(91.0000 mm, 69.0800 mm): Reference field of J10
-    @(90.1815 mm, 68.5381 mm): Segmento of R53 on F.Silkscreen
+    @(37.3400 mm, 86.5600 mm): Segmento of L1 on F.Silkscreen
+    @(37.5000 mm, 86.6500 mm): Reference field of C44
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(83.7500 mm, 52.0750 mm): Reference field of R67
-    @(83.2627 mm, 51.5275 mm): Segmento of R66 on F.Silkscreen
+    @(106.3250 mm, 53.2500 mm): Reference field of U7
+    @(129.6000 mm, 53.1000 mm): Segmento of U4 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(85.7625 mm, 84.0750 mm): Reference field of R59
-    @(85.2877 mm, 83.9550 mm): Segmento of R57 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(125.6625 mm, 66.6012 mm): Reference field of R47
-    @(125.8594 mm, 66.5100 mm): Segmento of C50 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(126.7565 mm, 85.3194 mm): Segmento of R48 on F.Silkscreen
-    @(127.0000 mm, 85.5700 mm): Reference field of C52
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(120.1329 mm, 85.3135 mm): Segmento of D21 on F.Silkscreen
-    @(119.5163 mm, 85.6635 mm): Reference field of D22
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(94.8375 mm, 76.8512 mm): Reference field of R54
-    @(93.8479 mm, 75.2490 mm): Segmento of D25 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(94.8375 mm, 76.8512 mm): Reference field of R54
-    @(95.8079 mm, 76.4490 mm): Segmento of D25 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(94.6002 mm, 78.8037 mm): Segmento of R54 on F.Silkscreen
-    @(94.5000 mm, 79.0700 mm): Reference field of C54
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(89.6200 mm, 72.7300 mm): Segmento of J10 on F.Silkscreen
-    @(90.6688 mm, 78.2106 mm): Reference field of R55
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(90.6688 mm, 78.2106 mm): Reference field of R55
-    @(89.6200 mm, 77.9200 mm): Segmento of J10 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(109.3800 mm, 72.7300 mm): Segmento of J8 on F.Silkscreen
-    @(109.5000 mm, 76.5000 mm): Reference field of J12
+    @(106.3250 mm, 57.2100 mm): Segmento of U7 on F.Silkscreen
+    @(106.3250 mm, 57.7500 mm): Reference field of U9
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
     @(106.3250 mm, 57.7500 mm): Reference field of U9
     @(106.3250 mm, 57.2100 mm): Segmento of U7 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(39.3910 mm, 23.6090 mm): Segmento of L2 on F.Silkscreen
-    @(52.9583 mm, 23.5617 mm): Reference field of C27
+    @(90.1815 mm, 68.5381 mm): Segmento of R53 on F.Silkscreen
+    @(91.0000 mm, 69.0800 mm): Reference field of J10
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(56.1417 mm, 26.3208 mm): Segmento of D6 on F.Silkscreen
-    @(58.3500 mm, 26.5867 mm): Reference field of C35
+    @(83.2627 mm, 51.5275 mm): Segmento of R66 on F.Silkscreen
+    @(83.7500 mm, 52.0750 mm): Reference field of R67
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(51.8750 mm, 52.5575 mm): Reference field of C15
+    @(65.3354 mm, 90.6762 mm): Segmento of R61 on F.Silkscreen
+    @(67.5125 mm, 90.8362 mm): Reference field of R63
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(65.3354 mm, 86.1762 mm): Segmento of R52 on F.Silkscreen
+    @(67.5125 mm, 86.3362 mm): Reference field of R61
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
     @(51.1137 mm, 52.2225 mm): Segmento of C14 on F.Silkscreen
+    @(51.8750 mm, 52.5575 mm): Reference field of C15
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(51.7450 mm, 54.5750 mm): Reference field of R12
+    @(57.8750 mm, 58.5600 mm): Segmento of U1 on F.Silkscreen
+    @(57.1250 mm, 58.8875 mm): Reference field of C11
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(57.1250 mm, 58.8875 mm): Reference field of C11
+    @(57.8750 mm, 58.5600 mm): Segmento of U1 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
     @(51.7344 mm, 54.4975 mm): Segmento of C15 on F.Silkscreen
+    @(51.7450 mm, 54.5750 mm): Reference field of R12
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(39.3910 mm, 23.6090 mm): Segmento of L2 on F.Silkscreen
-    @(44.0000 mm, 23.5700 mm): Reference field of C26
+    @(49.5225 mm, 91.0000 mm): Reference field of D11
+    @(49.8125 mm, 91.0000 mm): Segmento of D12 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(39.3955 mm, 23.5950 mm): Reference field of D5
-    @(39.3910 mm, 21.4600 mm): Segmento of L2 on F.Silkscreen
+    @(51.8955 mm, 88.0950 mm): Reference field of D12
+    @(51.3900 mm, 87.0456 mm): Segmento of C46 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(39.3910 mm, 23.6090 mm): Segmento of L2 on F.Silkscreen
-    @(39.3955 mm, 23.5950 mm): Reference field of D5
+    @(51.8955 mm, 88.0950 mm): Reference field of D12
+    @(52.4544 mm, 88.1100 mm): Segmento of C46 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(57.0665 mm, 3.6044 mm): Segmento of C22 on F.Silkscreen
-    @(56.5000 mm, 3.7200 mm): Reference field of R27
+    @(53.1800 mm, 20.1800 mm): Segmento of L2 on F.Silkscreen
+    @(52.0633 mm, 20.5033 mm): Reference field of R19
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(42.0000 mm, 26.6500 mm): Reference field of C18
-    @(37.3125 mm, 26.5000 mm): Segmento of D5 on F.Silkscreen
+    @(52.0633 mm, 20.5033 mm): Reference field of R19
+    @(42.8200 mm, 20.1800 mm): Segmento of L2 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(53.2500 mm, 25.8950 mm): Reference field of R34
-    @(52.8177 mm, 25.5017 mm): Segmento of C27 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(54.5000 mm, 28.2200 mm): Reference field of R38
-    @(53.0127 mm, 27.8475 mm): Segmento of R34 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(65.5600 mm, 16.5100 mm): Segmento of Q1 on F.Silkscreen
-    @(62.3333 mm, 16.9917 mm): Reference field of Q2
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(63.0000 mm, 27.4750 mm): Reference field of C33
-    @(61.8083 mm, 27.3903 mm): Segmento of D7 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(73.8750 mm, 29.1000 mm): Reference field of C34
-    @(73.1220 mm, 28.7350 mm): Segmento of C32 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(68.8637 mm, 29.3554 mm): Segmento of C30 on F.Silkscreen
-    @(68.4750 mm, 29.5200 mm): Reference field of R24
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(68.6377 mm, 26.6429 mm): Segmento of R23 on F.Silkscreen
-    @(69.1250 mm, 26.9404 mm): Reference field of C30
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(69.3038 mm, 15.7544 mm): Segmento of C19 on F.Silkscreen
-    @(68.5926 mm, 16.1793 mm): Reference field of C21
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(65.5600 mm, 10.0100 mm): Segmento of Q3 on F.Silkscreen
-    @(62.5000 mm, 10.3250 mm): Reference field of Q1
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(73.3933 mm, 6.5100 mm): Segmento of Q4 on F.Silkscreen
-    @(69.0000 mm, 6.9950 mm): Reference field of R17
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(62.3165 mm, 3.3544 mm): Segmento of C23 on F.Silkscreen
-    @(62.5000 mm, 3.8250 mm): Reference field of Q3
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(75.7627 mm, 2.4225 mm): Segmento of R22 on F.Silkscreen
-    @(76.0000 mm, 2.7200 mm): Reference field of R21
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(75.7627 mm, 4.6725 mm): Segmento of R21 on F.Silkscreen
-    @(76.0000 mm, 5.2200 mm): Reference field of R20
+    @(46.4694 mm, 20.5111 mm): Reference field of C22
+    @(42.8200 mm, 20.1800 mm): Segmento of L2 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
     @(118.0000 mm, 59.5800 mm): Reference field of J9
@@ -417,98 +252,90 @@
     @(110.5000 mm, 59.0750 mm): Reference field of R40
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(129.6000 mm, 53.1000 mm): Segmento of U4 on F.Silkscreen
-    @(106.3250 mm, 53.2500 mm): Reference field of U7
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(106.3250 mm, 57.7500 mm): Reference field of U9
-    @(106.3250 mm, 57.2100 mm): Segmento of U7 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(122.5496 mm, 63.9385 mm): Segmento of D19 on F.Silkscreen
-    @(122.1625 mm, 64.1012 mm): Reference field of R43
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
     @(122.0000 mm, 66.5700 mm): Reference field of C49
     @(121.9252 mm, 66.0537 mm): Segmento of R43 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(129.6000 mm, 53.1000 mm): Segmento of U4 on F.Silkscreen
+    @(109.5000 mm, 76.5000 mm): Reference field of J12
+    @(109.3800 mm, 72.7300 mm): Segmento of J8 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
     @(116.3250 mm, 53.2500 mm): Reference field of U10
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
     @(129.6000 mm, 53.1000 mm): Segmento of U4 on F.Silkscreen
-    @(120.4938 mm, 53.2419 mm): Reference field of R42
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(120.2565 mm, 55.1944 mm): Segmento of R42 on F.Silkscreen
     @(120.5996 mm, 55.4969 mm): Reference field of D20
+    @(120.2565 mm, 55.1944 mm): Segmento of R42 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(75.7627 mm, 7.1725 mm): Segmento of R20 on F.Silkscreen
-    @(77.1481 mm, 7.2515 mm): Reference field of C20
+    @(120.4938 mm, 53.2419 mm): Reference field of R42
+    @(129.6000 mm, 53.1000 mm): Segmento of U4 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(76.0165 mm, 22.4544 mm): Segmento of C25 on F.Silkscreen
-    @(76.3333 mm, 22.9750 mm): Reference field of C31
+    @(119.5163 mm, 85.6635 mm): Reference field of D22
+    @(120.1329 mm, 85.3135 mm): Segmento of D21 on F.Silkscreen
 [silk_overlap]: Solapamiento de serigrafía
     Regla: board setup constraints silk; warning
-    @(96.7387 mm, 18.7350 mm): Segmento of C38 on F.Silkscreen
+    @(125.6625 mm, 66.6012 mm): Reference field of R47
+    @(125.8594 mm, 66.5100 mm): Segmento of C50 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(126.7565 mm, 85.3194 mm): Segmento of R48 on F.Silkscreen
+    @(127.0000 mm, 85.5700 mm): Reference field of C52
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(122.1625 mm, 64.1012 mm): Reference field of R43
+    @(122.5496 mm, 63.9385 mm): Segmento of D19 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(94.8375 mm, 76.8512 mm): Reference field of R54
+    @(95.8079 mm, 76.4490 mm): Segmento of D25 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(94.8375 mm, 76.8512 mm): Reference field of R54
+    @(93.8479 mm, 75.2490 mm): Segmento of D25 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(94.5000 mm, 79.0700 mm): Reference field of C54
+    @(94.6002 mm, 78.8037 mm): Segmento of R54 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(99.5250 mm, 91.9450 mm): Segmento of U13 on F.Silkscreen
+    @(99.7625 mm, 92.0750 mm): Reference field of R58
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(99.7625 mm, 92.0750 mm): Reference field of R58
+    @(99.5250 mm, 91.9450 mm): Segmento of U13 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(90.6688 mm, 78.2106 mm): Reference field of R55
+    @(89.6200 mm, 77.9200 mm): Segmento of J10 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(89.6200 mm, 72.7300 mm): Segmento of J10 on F.Silkscreen
+    @(90.6688 mm, 78.2106 mm): Reference field of R55
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(85.7625 mm, 84.0750 mm): Reference field of R59
+    @(85.2877 mm, 83.9550 mm): Segmento of R57 on F.Silkscreen
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(91.5250 mm, 91.4450 mm): Segmento of U14 on F.Silkscreen
+    @(90.5000 mm, 91.5500 mm): Reference field of J16
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
+    @(99.5252 mm, 94.0275 mm): Segmento of R58 on F.Silkscreen
+    @(98.7625 mm, 94.0862 mm): Reference field of R51
+[silk_overlap]: Solapamiento de serigrafía
+    Regla: board setup constraints silk; warning
     @(97.5000 mm, 19.0700 mm): Reference field of R39
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(73.1637 mm, 31.8600 mm): Segmento of C34 on F.Silkscreen
-    @(72.9500 mm, 32.1756 mm): Reference field of C37
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(35.5200 mm, 21.5700 mm): Reference field of D8
-    @(35.2387 mm, 21.2350 mm): Segmento of C29 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(34.0350 mm, 23.7350 mm): Segmento of D8 on F.Silkscreen
-    @(35.0200 mm, 24.0700 mm): Reference field of D9
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(36.5000 mm, 26.6500 mm): Reference field of C17
-    @(33.5350 mm, 26.2350 mm): Segmento of D9 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(37.5000 mm, 29.8520 mm): Reference field of TP1
-    @(35.7887 mm, 29.4100 mm): Segmento of C17 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(37.3125 mm, 24.5000 mm): Segmento of D5 on F.Silkscreen
-    @(36.5000 mm, 26.6500 mm): Reference field of C17
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(36.5000 mm, 26.6500 mm): Reference field of C17
-    @(37.3125 mm, 26.5000 mm): Segmento of D5 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(51.5165 mm, 2.9544 mm): Segmento of C24 on F.Silkscreen
-    @(52.9583 mm, 3.2700 mm): Reference field of C28
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(6.5000 mm, 15.8200 mm): Reference field of C16
-    @(6.5000 mm, 15.6725 mm): Segmento of U2 on F.Silkscreen
-[silk_overlap]: Solapamiento de serigrafía
-    Regla: board setup constraints silk; warning
-    @(6.5000 mm, 15.8200 mm): Reference field of C16
-    @(6.5000 mm, 15.6725 mm): Segmento of U2 on F.Silkscreen
+    @(96.7387 mm, 18.7350 mm): Segmento of C38 on F.Silkscreen
 
-** Found 3 unconnected pads **
+** Found 1 unconnected pads **
 [unconnected_items]: Conexión faltante entre elementos
     Anulación local; error
-    @(72.6750 mm, 9.6500 mm): Pista [/VBUS] en (F.Cu), longitud 3.9051 mm
-    @(75.2500 mm, 11.7125 mm): Pista [/VBUS] en (F.Cu), longitud 0.5000 mm
-[unconnected_items]: Conexión faltante entre elementos
-    Anulación local; error
-    @(69.0000 mm, 21.1000 mm): Pista [/CHG_TS] en (B.Cu), longitud 10.2092 mm
-    @(72.5625 mm, 15.9000 mm): Pad 8 [/CHG_TS] de U5 en F.Cu
-[unconnected_items]: Conexión faltante entre elementos
-    Anulación local; error
-    @(68.1750 mm, 27.6454 mm): Pista [/CHG_DRV] en (F.Cu), longitud 2.1567 mm
-    @(77.4375 mm, 14.9000 mm): Pad 23 [/CHG_DRV] de U5 en F.Cu
+    @(77.2825 mm, 12.4000 mm): Pad 28 [/CHG_SW1] de U5 en F.Cu
+    @(58.2084 mm, 11.9458 mm): Pista [/CHG_SW1] en (F.Cu), longitud 2.4948 mm
 
 ** Found 0 Footprint errors **
 

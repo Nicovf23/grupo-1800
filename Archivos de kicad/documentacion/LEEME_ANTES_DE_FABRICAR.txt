@@ -1,16 +1,18 @@
 CARRITO DON JULIO - PLACA PRINCIPAL REV D (LiPo 6S + ESP32 DevKit V1)
 =====================================================================
 Placa 130 x 100 mm, 4 capas, 204 componentes. DevKit V1 en zocalo (2 tiras hembra 1x15).
+ESTADO: EN DESARROLLO - no es version de produccion.
 
-!!! NO PEDIR TODAVIA: faltan 3 conexiones junto al cargador U5 (BQ25756), rutear a mano en KiCad !!!
-1) /VBUS    : pista en (72.68, 9.65 mm)  ->  pista en (75.25, 11.71 mm)   [pines VAC 32/33; pista >= 0.5 mm]
-2) /CHG_TS  : U5 pin 8 (72.56, 15.90 mm) ->  pista en B.Cu (69.00, 21.10 mm)  [senal, 0.2 mm]
-3) /CHG_DRV : U5 pin 23 (77.44, 14.90 mm) -> pista en (68.18, 27.65 mm)   [alimentacion de drivers, >= 0.3 mm]
-Como: abrir cdj_revD.kicad_pro -> Editor PCB -> tecla X en el punto indicado; el router "Empujar" abre paso.
-Luego: Inspeccionar -> DRC (0 sin conectar) y regenerar fabricacion.
+!!! NO PEDIR TODAVIA: falta 1 conexion junto al cargador U5 (BQ25756), rutear a mano en KiCad !!!
+ /CHG_SW1 : U5 pin 28 (77.28, 12.40 mm) -> pista existente en (58.21, 11.95 mm)
+            (pin de nodo de conmutacion SW1 del cargador: pista corta y directa, idealmente >= 0.3 mm)
+Como: abrir cdj_revD.kicad_pro -> Editor PCB -> tecla X en el pin 28 de U5; el router "Empujar" abre paso.
+Luego: Inspeccionar -> DRC (0 "sin conectar") y regenerar los archivos de fabricacion.
 
 ANTES DE SOLDAR EL ZOCALO:
  - Verificar el orden de pines de TU DevKit contra PINES_DEVKIT_revD.csv (EN arriba-izq junto a la antena, 3V3 abajo-der junto al USB).
  - Fila derecha doble (22.86 y 25.4 mm): soldar la tira hembra en la que coincida con tu DevKit.
  - No conectar el USB del DevKit con la bateria desconectada y JP1 cerrado (retroalimentacion del regulador del DevKit).
-Avisos DRC aceptados: serigrafia (cosmetico), 5 alivios termicos con 1 radio.
+
+Avisos DRC aceptados: serigrafia (cosmetico), 7 vias sobrantes, 7 alivios termicos con 1 radio,
+2 tramos de 0.1 mm en CHG_DRV (< 1 mm; JLCPCB admite 0.09 mm).

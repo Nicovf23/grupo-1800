@@ -8,6 +8,7 @@
 | B | Componentes del profesor (AP63203, BTS723GW, ESD5Z3.3T…) + carga USB-C 4S (BQ25798) | Requisito del profesor + carga dentro del carro |
 | C | Batería **6S**: BQ25756 + BQ76930, SMF26CA en batería | Decisión del equipo (24 V) |
 | D | **ESP32 DevKit V1** en zócalo; IMU por I2C | Decisión del equipo |
+| D (v2) | Inductor del cargador IHLP-4040; más holgura alrededor del BQ25756; BQ7693002 | Reducir tamaño y congestión del cargador |
 
 ## Decisiones tomadas por el equipo
 
