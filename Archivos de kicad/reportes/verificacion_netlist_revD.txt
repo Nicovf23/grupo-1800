@@ -1,0 +1,2 @@
+pines esperados: 575  coinciden: 575  mal: 0
+nets fusionadas: ninguna

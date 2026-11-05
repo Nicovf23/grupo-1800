@@ -1,0 +1,100 @@
+﻿Categoria,Referencias,Cant,Valor,Fabricante / N. parte,Encapsulado,Funcion
+A,C41,1,220uF 50V,Aluminio 220uF/50V,CP_Elec_10x10.5,Bulk bateria
+A,C42,1,10uF 50V,X5R 1206 50V,C_1206_3216Metric,C1 datasheet (10uF)
+A,C43,1,100nF,X7R 0603 25V,C_0603_1608Metric,C3 BST (100nF)
+A,C44 C45,2,22uF 16V,X5R 1206 16V,C_1206_3216Metric,C2 datasheet (2x22uF)
+A,C46,1,100uF 50V,Aluminio 100uF/50V,CP_Elec_8x10.5,Bulk entrada buck
+A,D11,1,MBRA340T3G,onsemi MBRA340T3G,D_SMA,Proteccion polaridad inversa logica
+A,D12,1,SMF3.3A,Littelfuse SMF3.3A (verificar sufijo),D_SOD-123F,TVS riel 3.3V
+A,D14 D15 D18 D19 D20 D21 D22 D25,8,ESD5Z3.3T,onsemi ESD5Z3.3T1G,D_SOD-523,ESD linea expuesta
+A,D5,1,SMF24CA,Littelfuse SMF24CA,D_SOD-123F,TVS VBUS (PD 20V < 24V VRWM)
+A,JP1,1,3V3,Puente soldadura (cerrado),SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm,Abrir para medir consumo / aislar 3.3V
+A,R73,1,0,1% 0603,R_0603_1608Metric,0R: EN del buck (DNP = placa apagada)
+A,TP12,1,GND,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
+A,TP6,1,VBAT,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
+A,TP8,1,+3V3,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
+A,U13 U14,2,BTS723GW,Infineon BTS723GWXUMA1,SOIC-14_3.9x8.7mm_P1.27mm,Interruptor high-side 2 canales con diagnostico
+A,U3,1,AP63203WU-7,Diodes AP63203WU-7,TSOT-23-6,3.3V 2A desde bateria
+B,C1,1,47uF 10V,X5R 1206 10V,C_1206_3216Metric,Bulk junto al ESP32 (picos WiFi)
+B,C2,1,470uF 16V,Aluminio 470uF/16V low-ESR,CP_Elec_8x10.5,Bulk servo (C2 profesor: valor adaptado)
+B,D1,1,SMF26CA,Littelfuse SMF26CA,D_SOD-123F,TVS bateria (6S 25.2V < 26V VRWM; SMF24CA no sirve a 6S)
+B,D4 D6 D7,3,1N5819HW,Diodes 1N5819HW-7-F,D_SOD-123,Pulso de arranque TS1 (aislado del GPIO)
+B,L1,1,4.7uH,APV APH0630T4R7M,L_APV_APH0630,Inductor (datasheet sugiere 3.9uH; 4.7uH verificado ripple 26%)
+B,R51,1,1.1k,2512 1W (1 LED a 6S: 0.45W; 0R si el modulo trae R),R_2512_6332Metric,Limitadora LED
+B,R52,1,1.2k,2512 1W (1 LED a 6S: 0.45W; 0R si el modulo trae R),R_2512_6332Metric,Limitadora LED
+C,C11,1,10uF 50V,X7R 1206 50V,C_1206_3216Metric,Cf BAT (typ 10uF)
+C,C12,1,10uF 25V,X7R 0805 25V,C_0805_2012Metric,Cf VC5X
+C,C14,1,4.7uF,X7R 0805 10V,C_0805_2012Metric,REGOUT (1-4.7uF)
+C,C15 C16 C48,3,1uF,X7R 0603,C_0603_1608Metric,CAP1 1uF
+C,C17 C18,2,10uF 35V,X5R 1206 35V,C_1206_3216Metric,
+C,C19 C35,2,470nF,X7R 0603 50V,C_0603_1608Metric,
+C,C20 C21 C36 C37,4,100nF,X7R 0603 50V,C_0603_1608Metric,
+C,C22 C23 C24 C25 C31 C32 C33 C34,8,10uF 50V,X5R 1206 50V,C_1206_3216Metric,Entrada puente (TI 80uF)
+C,C26,1,1uF 50V,X7R 0603 50V,C_0603_1608Metric,VAC 1uF
+C,C27 C28,2,100nF,X7R 0603 25V,C_0603_1608Metric,Bootstrap 1
+C,C29 C30,2,4.7uF,X7R 0805 16V,C_0805_2012Metric,
+C,C10 C13 C3 C4 C5 C6 C7 C8 C9,9,1uF,X7R 0603 25V,C_0603_1608Metric,Filtro celda Cc (typ 1uF)
+C,C38,1,22uF,X5R 0805 10V,C_0805_2012Metric,Desacoplo 3V3 junto al zocalo
+C,C39 C40 C47 C49 C50 C51 C52 C53 C54 C57 C58 C59,12,100nF,X7R 0603,C_0603_1608Metric,
+C,C55 C56,2,100nF 50V,X7R 0603 50V,C_0603_1608Metric,
+C,D10,1,AZUL PG,LED 0603,LED_0603_1608Metric,Indicador cargador
+C,D13,1,VERDE 3V3,LED verde 0603,LED_0603_1608Metric,
+C,D2 D3,2,1N4148W,Diodes 1N4148W-7-F,D_SOD-123,Diodo entrada superior -> BAT (9.1.3)
+C,D8,1,NARANJA STAT1,LED 0603,LED_0603_1608Metric,Indicador cargador
+C,D9,1,VERDE STAT2,LED 0603,LED_0603_1608Metric,Indicador cargador
+C,F1,1,5A,"Littelfuse 0451005.MRL (5A, verificar Vr>=32V)",Fuse_Littelfuse-NANO2-451_453,Sobrecorriente placa+cargador
+C,H1 H2 H3 H4,4,M3,M3 + arandela antivibracion,MountingHole_3.2mm_M3_Pad_Via,
+C,J1,1,BATERIA 6S (XT30),AMASS XT30PW-M,AMASS_XT30PW-M_1x02_P2.50mm_Horizontal,Toma de bateria en paralelo con el ESC
+C,J10,1,ESC,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
+C,J11,1,SERVO,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
+C,J12,1,VSERVO IN (BEC),AMASS XT30PW-M,AMASS_XT30PW-M_1x02_P2.50mm_Horizontal,
+C,J13,1,LUZ blancas delanteras,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J14,1,LUZ rojas traseras,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J15,1,LUZ rojas Modo Sport,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J16,1,LUZ freno/aux,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J17,1,NTC MOTOR 10k,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J18,1,NTC ESC 10k,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J19,1,BOTON AUTORIZ. SPORT,JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,
+C,J2,1,BALANCEO 6S (JST-XH),JST B7B-XH-A,JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical,Conector de balanceo de la LiPo 6S
+C,J20,1,I2C EXP,JST B4B-PH-K-S,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,
+C,J3,1,USB-C (SOLO CARGA),HRO TYPE-C-31-M-12,USB_C_Receptacle_HRO_TYPE-C-31-M-12,Entrada de carga PD
+C,J4,1,NTC BATERIA 10k (103AT),JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,NTC pegado a la LiPo: sin NTC no carga
+C,J5,1,INTERRUPTOR (abierto=ON),JST B2B-PH-K-S,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,Interruptor de electronica en chasis
+C,J6,1,RX SERIE (CRSF/SBUS/iBUS),JST B4B-PH-K-S,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,
+C,J7,1,RC_CH1 PWM,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
+C,J8,1,RC_CH2 PWM,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
+C,J9,1,RC_CH3 PWM,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
+C,JP2,1,BEC ESC->VSERVO,Puente soldadura (abierto),SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,
+C,L2,1,10uH,Vishay IHLP6767GZER100M01 (Tabla 7-1),L_Vishay_IHLP-6767,Inductor buck-boost 250kHz
+C,Q1 Q2 Q3 Q4,4,BSC028N06LS3,"Infineon BSC028N06LS3 (60V 2.8mOhm, logic level)",TDSON-8-1,Puente buck-boost
+C,R1 R10 R2 R3 R4 R5 R50 R54 R6 R7 R8 R9,12,100,1% 0603,R_0603_1608Metric,Filtro entrada celda Rc (typ 100R)
+C,R11 R16 R37 R38 R49 R53 R55 R64 R65 R67,10,10k,1% 0603,R_0603_1608Metric,TS2 sin NTC: 10k a VC5X (Tabla 9-1)
+C,R12 R13 R15 R41 R43 R45 R47 R66,8,1k,1% 0603,R_0603_1608Metric,Serie boot
+C,R14 R20,2,1M,1% 0603,R_0603_1608Metric,RALERT 1M a VSS
+C,R17 R24,2,5m,Shunt 5mOhm 1206 1W,R_1206_3216Metric,RAC_SNS
+C,R18 R19 R23 R25 R26,5,10,1% 0603,R_0603_1608Metric,
+C,R21,1,261k,1% 0603,R_0603_1608Metric,RAC2
+C,R22,1,73.2k,1% 0603,R_0603_1608Metric,RAC3
+C,R27,1,249k,1% 0603,R_0603_1608Metric,FB RTOP (TI 249k)
+C,R28,1,16.2k,1% 0603,R_0603_1608Metric,FB RBOT: 25.14V = 4.19V/celda
+C,R29,1,24.9k,1% 0603,R_0603_1608Metric,ICHG = 50AkOhm/24.9k = 2.0A
+C,R30,1,6.65k,1% 0603,R_0603_1608Metric,ILIM = 20AkOhm/6.65k = 3.0A (60W)
+C,R31,1,133k,1% 0603,R_0603_1608Metric,fsw 250kHz (Tabla 6-2)
+C,R32,1,5.23k,1% 0603,R_0603_1608Metric,TS RT1 (TI 5.24k)
+C,R33,1,30.1k,1% 0603,R_0603_1608Metric,TS RT2 (TI 30.31k)
+C,R34 R35 R36 R39 R58 R59 R60 R62,8,2.2k,1% 0603,R_0603_1608Metric,
+C,R40,1,220,1% 0603,R_0603_1608Metric,
+C,R42 R44 R46 R48,4,100k,1% 0603,R_0603_1608Metric,
+C,R56 R57,2,150,1% 0603,R_0603_1608Metric,"GND logico (proteccion inversion, datasheet)"
+C,R61 R63,2,1.2k,2512 1W (1 LED a 6S: 0.45W; 0R si el modulo trae R),R_2512_6332Metric,Limitadora LED
+C,R68 R69,2,4.7k,1% 0603,R_0603_1608Metric,
+C,TH1,1,10k 3435K,Murata NCP18XH103F03RB,R_0603_1608Metric,TS1 temperatura placa (obligatorio)
+C,TP1,1,VBUS,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
+C,TP2,1,CHG_VOUT,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
+C,TP3,1,CHG_INT,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
+C,U1,1,BQ7693003DBT,"TI BQ7693003DBTR (REGOUT 3.3V, I2C 0x08, CRC - verificar variante)",TSSOP-30_4.4x7.8mm_P0.5mm,Medicion por celda y balanceo 6S
+C,U2,1,CH224K,WCH CH224K (LCSC C970725),SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm,"Negocia 20V PD (CFG1 NC=20V, DP-DM unidos: solo PD)"
+C,U4,1,ESP32 DevKit V1 (30p),DOIT ESP32 DevKit V1 30 pines + 2x tira hembra 1x15 2.54mm,ESP32_DevKit_V1_30P,MCU en zocalo
+C,U5,1,BQ25756,TI BQ25756RRVR (LCSC C19272232),QFN-36-1EP_5x6mm_P0.5mm_EP3.6x4.6mm,Controlador cargador buck-boost 1-14S
+C,U6,1,LSM6DSL,ST LSM6DSLTR,LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y,IMU 6 ejes por I2C (0x6A)
+C,U10 U11 U12 U7 U8 U9,6,74LVC1G125,TI SN74LVC1G125DBVR,SOT-23-5,Buffer entrada 5V-tolerante

@@ -1,0 +1,31 @@
+﻿Pin zocalo,Lado,Pin DevKit,Senal
+1,izquierdo,EN,libre (NC)
+2,izquierdo,VP/GPIO36,NTC_MOTOR
+3,izquierdo,VN/GPIO39,NTC_ESC
+4,izquierdo,GPIO34,RC_CH1_3V
+5,izquierdo,GPIO35,RC_CH2_3V
+6,izquierdo,GPIO32,RC_CH3_3V
+7,izquierdo,GPIO33,SPORT_BTN
+8,izquierdo,GPIO25,ESC_PWM_3V
+9,izquierdo,GPIO26,SERVO_PWM_3V
+10,izquierdo,GPIO27,IMU_INT1
+11,izquierdo,GPIO14,AFE_ALERT
+12,izquierdo,GPIO12,LT_REAR
+13,izquierdo,GPIO13,CHG_CE
+14,izquierdo,GND,GND
+15,izquierdo,VIN,libre (NC)
+16,derecho,GPIO23,AFE_BOOT
+17,derecho,GPIO22,I2C_SCL
+18,derecho,TX0/GPIO1,libre (NC)
+19,derecho,RX0/GPIO3,libre (NC)
+20,derecho,GPIO21,I2C_SDA
+21,derecho,GPIO19,LT_ST_B
+22,derecho,GPIO18,LT_ST_A
+23,derecho,GPIO5,LT_AUX
+24,derecho,TX2/GPIO17,RC_TX
+25,derecho,RX2/GPIO16,RC_RX_3V
+26,derecho,GPIO4,OUT_EN_N
+27,derecho,GPIO2,LT_FRONT
+28,derecho,GPIO15,LT_SPORT
+29,derecho,GND,GND
+30,derecho,3V3,+3V3

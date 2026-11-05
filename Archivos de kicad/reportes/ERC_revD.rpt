@@ -1,0 +1,13 @@
+Informe de ERC (2026-11-04T21:47:05-0400, codificación UTF8)
+
+***** Hoja /
+[pin_to_pin]: Pines del tipo Bidirectional y Power output están conectados
+    ; warning
+    @(435.61 mm, 116.84 mm): Symbol U6 Pin 1 [SDO/SA0, Bidirectional, Line]
+    @(778.51 mm, 250.19 mm): Symbol #FLG01 Pin 1 [Power output, Line]
+[pin_to_pin]: Pines del tipo Bidirectional y Power output están conectados
+    ; warning
+    @(435.61 mm, 119.38 mm): Symbol U6 Pin 2 [SDX, Bidirectional, Line]
+    @(778.51 mm, 250.19 mm): Symbol #FLG01 Pin 1 [Power output, Line]
+
+**Mensajes ERC: 2. Errores0, Avisos 2

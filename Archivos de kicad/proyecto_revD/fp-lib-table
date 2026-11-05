@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CDJ")(type "KiCad")(uri "${KIPRJMOD}/CDJ.pretty")(options "")(descr "Carrito Don Julio"))
+)
