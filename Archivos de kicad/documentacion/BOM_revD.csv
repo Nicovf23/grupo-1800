@@ -9,6 +9,7 @@ A,D12,1,SMF3.3A,Littelfuse SMF3.3A (verificar sufijo),D_SOD-123F,TVS riel 3.3V
 A,D14 D15 D18 D19 D20 D21 D22 D25,8,ESD5Z3.3T,onsemi ESD5Z3.3T1G,D_SOD-523,ESD linea expuesta
 A,D5,1,SMF24CA,Littelfuse SMF24CA,D_SOD-123F,TVS VBUS (PD 20V < 24V VRWM)
 A,JP1,1,3V3,Puente soldadura (cerrado),SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm,Abrir para medir consumo / aislar 3.3V
+A,L1,1,4.7uH,"APV APH0630T4R7M (4.7uH, Isat 8-9A, DCR 33mOhm max)",L_APV_APH0630,"Inductor 3.3V: rizado 26-28% (Eq.7), Ipico 2.28A; mejor eficiencia a carga ligera"
 A,R73,1,0,1% 0603,R_0603_1608Metric,0R: EN del buck (DNP = placa apagada)
 A,TP12,1,GND,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
 A,TP6,1,VBAT,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
@@ -19,7 +20,6 @@ B,C1,1,47uF 10V,X5R 1206 10V,C_1206_3216Metric,Bulk junto al ESP32 (picos WiFi)
 B,C2,1,470uF 16V,Aluminio 470uF/16V low-ESR,CP_Elec_8x10.5,Bulk servo (C2 profesor: valor adaptado)
 B,D1,1,SMF26CA,Littelfuse SMF26CA,D_SOD-123F,TVS bateria (6S 25.2V < 26V VRWM; SMF24CA no sirve a 6S)
 B,D4 D6 D7,3,1N5819HW,Diodes 1N5819HW-7-F,D_SOD-123,Pulso de arranque TS1 (aislado del GPIO)
-B,L1,1,4.7uH,APV APH0630T4R7M,L_APV_APH0630,Inductor (datasheet sugiere 3.9uH; 4.7uH verificado ripple 26%)
 B,R51,1,1.1k,2512 1W (1 LED a 6S: 0.45W; 0R si el modulo trae R),R_2512_6332Metric,Limitadora LED
 B,R52,1,1.2k,2512 1W (1 LED a 6S: 0.45W; 0R si el modulo trae R),R_2512_6332Metric,Limitadora LED
 C,C11,1,10uF 50V,X7R 1206 50V,C_1206_3216Metric,Cf BAT (typ 10uF)
@@ -65,7 +65,7 @@ C,J7,1,RC_CH1 PWM,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
 C,J8,1,RC_CH2 PWM,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
 C,J9,1,RC_CH3 PWM,Header 1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,
 C,JP2,1,BEC ESC->VSERVO,Puente soldadura (abierto),SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,
-C,L2,1,10uH,Vishay IHLP6767GZER100M01 (Tabla 7-1),L_Vishay_IHLP-6767,Inductor buck-boost 250kHz
+C,L2,1,10uH,"Vishay IHLP4040DZER100M5A (LCSC C511353; 10uH, 6.5A, DCR 30.9mOhm)",L_Vishay_IHLP-4040,Inductor buck-boost 250kHz (reducido 2026-11-05)
 C,Q1 Q2 Q3 Q4,4,BSC028N06LS3,"Infineon BSC028N06LS3 (60V 2.8mOhm, logic level)",TDSON-8-1,Puente buck-boost
 C,R1 R10 R2 R3 R4 R5 R50 R54 R6 R7 R8 R9,12,100,1% 0603,R_0603_1608Metric,Filtro entrada celda Rc (typ 100R)
 C,R11 R16 R37 R38 R49 R53 R55 R64 R65 R67,10,10k,1% 0603,R_0603_1608Metric,TS2 sin NTC: 10k a VC5X (Tabla 9-1)

@@ -33,13 +33,14 @@
 | Corriente de carga | 50 A·kΩ / 24.9 kΩ | 2.0 A (≈ 2.5–3 h para 5000 mAh) |
 | Límite de entrada USB | 20 A·kΩ / 6.65 kΩ | 3.0 A (60 W) |
 | Ventana de entrada del cargador | 1.1 V / 1.2 V con 1M/261k/73.2k | 4.39–21.9 V |
+| Rizado del inductor de 3.3 V (L1 = 4.7 µH) | 3.3 × (Vin − 3.3) / (Vin × 4.7 µH × 1.1 MHz) | 0.52–0.56 A (26–28 %), pico 2.28 A |
 
 ## Clasificación de componentes (requisito del profesor)
 
 | Categoría | Significado | Cantidad |
 |---|---|---|
-| A | Reutilizados directamente de la lista del profesor | 25 |
-| B | Del profesor, con adaptación | 9 |
+| A | Reutilizados directamente de la lista del profesor | 26 |
+| B | Del profesor, con adaptación | 8 |
 | C | Nuevos, necesarios para el carro | 170 |
 | D | Bloques de la referencia que no aplican (RS-485, 0–10 V, 4–20 mA, relés, E/S industriales, EnergyMeter) | 0 en placa |
 

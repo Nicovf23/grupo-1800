@@ -34,7 +34,6 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 |---|---|
 | Cargador BQ25756 | Valores calculados con las fórmulas del datasheet (FB 249k/16.2k → 25.14 V; ICHG 24.9k → 2 A; ILIM 6.65k → 3 A; ventana 4.4–21.9 V). Estabilidad del lazo, temperatura de los MOSFET y del inductor con carga real |
 | MOSFET del cargador | Se usa BSC028N06LS3 (Infineon, 60 V, 2.8 mΩ) como equivalente al AONS66614 que recomienda TI. No validado en este circuito |
-| Inductor del AP63203 | APH0630T4R7M (4.7 µH, del profesor). El datasheet recomienda 3.9 µH para la versión de 3.3 V; el rizado calculado es 26 %. Confirmar con el profesor |
 | Monitor BQ76930 | Conexión 6S según la Tabla 9-3. Variante con REGOUT 3.3 V e I2C 0x08 por confirmar al comprar |
 | TVS SMF26CA en VBAT | Con 6S la tensión de recorte (~42 V) supera el máximo absoluto del AP63203 (35 V DC). Protege contra ESD, no contra transitorios largos |
 | Fusible F1 | 0451005.MRL (5 A): verificar tensión nominal ≥ 32 V en el datasheet |
@@ -42,24 +41,41 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 | Resistencias de LED | 1.1k/1.2k en 2512 dimensionadas para 1 LED a 25.2 V (0.45 W) |
 | Térmica | Sin análisis térmico. Placa 130 × 100 mm, 4 capas |
 
-## 4. Fuera del alcance de esta revisión
+## 4. Puntos resueltos
+
+### Inductor del AP63203 (L1): se mantiene APH0630T4R7M (4.7 µH)
+
+La Tabla 2 del datasheet de Diodes sugiere 3.9 µH para la versión de 3.3 V. Se verificó el componente del profesor con las ecuaciones de diseño del mismo datasheet, con entrada de 18 a 25.2 V (6S) y fsw = 1.1 MHz:
+
+| Criterio del datasheet | Resultado con 4.7 µH | ¿Cumple? |
+|---|---|---|
+| Inductancia entre 2.2 y 10 µH | 4.7 µH | Sí |
+| Rizado ΔIL entre 30 y 50 % de 2 A (Ec. 7) | 0.52–0.56 A (26–28 %); con 3.9 µH sería 31–33 % | Ligeramente por debajo |
+| Corriente nominal ≥ 2.7 A (35 % sobre 2 A) | 5.2–6 A térmica | Sí |
+| Saturación por encima de la corriente pico (Ec. 8: 2.28 A) y del límite del convertidor (3.1 A máx.) | Isat 8–9 A | Sí |
+| DCR < 100 mΩ | 33 mΩ máx. | Sí |
+
+**Justificación:** la carga real es de unos 0.6 A, y el datasheet recomienda más inductancia para mejor eficiencia a carga ligera. El ciclo de trabajo es de 13–18 %, lejos del 50 % donde aparece la oscilación subarmónica en modo corriente. El rizado de salida es menor que con 3.9 µH. El componente pasa a categoría **A** (reutilizado sin cambios).
+
+## 5. Fuera del alcance de esta revisión
 
 - **Firmware:** no escrito. Modo Sport, curvas de acelerador, failsafe y comunicación con el cargador, el monitor y la IMU quedan pendientes.
 - **Motor y ESC:** no seleccionados. Falta la relación de transmisión. Con 6S se requiere KV ≈ 179 × relación.
 - **Imágenes de referencia del profesor:** no recibidas. La selección de componentes se basa en la lista escrita.
 - **Espacio en el chasis:** desconocido. La placa de 130 × 100 mm es provisional.
 
-## 5. Avisos de DRC aceptados (no afectan el funcionamiento)
+## 6. Avisos de DRC aceptados (no afectan el funcionamiento)
 
 - Serigrafía superpuesta o sobre cobre (cosmético).
 - 5 alivios térmicos con un solo radio en pads de GND.
 
-## 6. Checklist para pasar a producción
+## 7. Checklist para pasar a producción
 
 - [ ] Rutear las 3 conexiones pendientes y obtener DRC con 0 "sin conectar"
 - [ ] Revisar o mejorar el plano GND de In1
 - [ ] Verificar el pinout y el ancho del DevKit real
-- [ ] Confirmar el inductor del AP63203 y la variante del BQ76930
+- [x] Verificar el inductor del AP63203 (ver sección 4)
+- [ ] Confirmar la variante del BQ76930
 - [ ] Revisión del diseño por el profesor o un tercero
 - [ ] Ajustar el tamaño de la placa al chasis
 - [ ] Regenerar los archivos de fabricación y cambiar el estado a "candidato a producción"

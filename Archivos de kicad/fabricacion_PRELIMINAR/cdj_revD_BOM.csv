@@ -51,7 +51,7 @@
 "J18","NTC ESC 10k","Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical","C","JST B2B-PH-K-S","1"
 "J19","BOTON AUTORIZ. SPORT","Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical","C","JST B2B-PH-K-S","1"
 "J20","I2C EXP","Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical","C","JST B4B-PH-K-S","1"
-"L1","4.7uH","Inductor_SMD:L_APV_APH0630","B","APV APH0630T4R7M","1"
+"L1","4.7uH","Inductor_SMD:L_APV_APH0630","A","APV APH0630T4R7M (4.7uH, Isat 8-9A, DCR 33mOhm max)","1"
 "L2","10uH","Inductor_SMD:L_Vishay_IHLP-6767","C","Vishay IHLP6767GZER100M01 (Tabla 7-1)","1"
 "Q1-Q4","BSC028N06LS3","Package_TO_SOT_SMD:TDSON-8-1","C","Infineon BSC028N06LS3 (60V 2.8mOhm, logic level)","4"
 "R1-R10,R50,R54","100","Resistor_SMD:R_0603_1608Metric","C","1% 0603","12"

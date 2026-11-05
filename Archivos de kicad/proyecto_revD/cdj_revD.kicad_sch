@@ -1,7 +1,7 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
 	(uuid "19b5cbfb-e471-4a35-99d0-517f7c65bad2")
 	(paper "A1")
-	(title_block (title "Placa principal Carrito Don Julio (6S, DevKit V1)") (company "Carrito Don Julio") (rev "D") (comment 1 "En desarrollo - no es version de produccion"))
+	(title_block (title "Placa principal Carrito Don Julio (6S, DevKit V1)") (company "Carrito Don Julio") (rev "D") (comment 1 "Generado desde design_d.py - verificado contra netlist"))
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
@@ -7470,8 +7470,8 @@
 		(property "Value" "4.7uH" (at 271.78 464.82 0) (effects (font (size 1.27 1.27)) (justify left)))
 		(property "Footprint" "Inductor_SMD:L_APV_APH0630" (at 269.24 461.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 269.24 461.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "MPN" "APV APH0630T4R7M" (at 269.24 461.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "BOM_Cat" "B" (at 269.24 461.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "MPN" "APV APH0630T4R7M (4.7uH, Isat 8-9A, DCR 33mOhm max)" (at 269.24 461.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "BOM_Cat" "A" (at 269.24 461.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(pin "1" (uuid "c1012fc6-8da1-4a18-bc50-9b115d084b4b"))
 		(pin "2" (uuid "21b7230d-4769-4d8c-b867-b2c6f7e56c6d"))
 		(instances (project "cdj_revD" (path "/19b5cbfb-e471-4a35-99d0-517f7c65bad2" (reference "L1") (unit 1))))
