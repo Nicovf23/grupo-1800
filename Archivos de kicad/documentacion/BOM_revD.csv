@@ -92,7 +92,7 @@ C,TH1,1,10k 3435K,Murata NCP18XH103F03RB,R_0603_1608Metric,TS1 temperatura placa
 C,TP1,1,VBUS,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
 C,TP2,1,CHG_VOUT,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
 C,TP3,1,CHG_INT,Pad de prueba,TestPoint_Pad_D1.5mm,Punto de prueba
-C,U1,1,BQ7693003DBT,"TI BQ7693003DBTR (REGOUT 3.3V, I2C 0x08, CRC - verificar variante)",TSSOP-30_4.4x7.8mm_P0.5mm,Medicion por celda y balanceo 6S
+C,U1,1,BQ7693002DBT,"TI BQ7693002DBTR (REGOUT 3.3V, I2C 0x08, sin CRC; LCSC C2871830)",TSSOP-30_4.4x7.8mm_P0.5mm,Medicion por celda y balanceo 6S
 C,U2,1,CH224K,WCH CH224K (LCSC C970725),SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm,"Negocia 20V PD (CFG1 NC=20V, DP-DM unidos: solo PD)"
 C,U4,1,ESP32 DevKit V1 (30p),DOIT ESP32 DevKit V1 30 pines + 2x tira hembra 1x15 2.54mm,ESP32_DevKit_V1_30P,MCU en zocalo
 C,U5,1,BQ25756,TI BQ25756RRVR (LCSC C19272232),QFN-36-1EP_5x6mm_P0.5mm_EP3.6x4.6mm,Controlador cargador buck-boost 1-14S

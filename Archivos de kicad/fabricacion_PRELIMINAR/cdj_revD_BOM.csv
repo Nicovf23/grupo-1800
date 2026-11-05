@@ -78,7 +78,7 @@
 "R68,R69","4.7k","Resistor_SMD:R_0603_1608Metric","C","1% 0603","2"
 "R73","0","Resistor_SMD:R_0603_1608Metric","A","1% 0603","1"
 "TH1","10k 3435K","Resistor_SMD:R_0603_1608Metric","C","Murata NCP18XH103F03RB","1"
-"U1","BQ7693003DBT","Package_SO:TSSOP-30_4.4x7.8mm_P0.5mm","C","TI BQ7693003DBTR (REGOUT 3.3V, I2C 0x08, CRC - verificar variante)","1"
+"U1","BQ7693002DBT","Package_SO:TSSOP-30_4.4x7.8mm_P0.5mm","C","TI BQ7693002DBTR (REGOUT 3.3V, I2C 0x08, sin CRC; LCSC C2871830)","1"
 "U2","CH224K","Package_SO:SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm","C","WCH CH224K (LCSC C970725)","1"
 "U3","AP63203WU-7","Package_TO_SOT_SMD:TSOT-23-6","A","Diodes AP63203WU-7","1"
 "U4","ESP32 DevKit V1 (30p)","CDJ:ESP32_DevKit_V1_30P","C","DOIT ESP32 DevKit V1 30 pines + 2x tira hembra 1x15 2.54mm","1"

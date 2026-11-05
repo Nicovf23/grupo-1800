@@ -34,7 +34,7 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 |---|---|
 | Cargador BQ25756 | Valores calculados con las fórmulas del datasheet (FB 249k/16.2k → 25.14 V; ICHG 24.9k → 2 A; ILIM 6.65k → 3 A; ventana 4.4–21.9 V). Estabilidad del lazo, temperatura de los MOSFET y del inductor con carga real |
 | MOSFET del cargador | Se usa BSC028N06LS3 (Infineon, 60 V, 2.8 mΩ) como equivalente al AONS66614 que recomienda TI. No validado en este circuito |
-| Monitor BQ76930 | Conexión 6S según la Tabla 9-3. Variante con REGOUT 3.3 V e I2C 0x08 por confirmar al comprar |
+| Monitor BQ76930 | Conexión 6S según la Tabla 9-3; balanceo y lectura de celdas sin probar en hardware |
 | TVS SMF26CA en VBAT | Con 6S la tensión de recorte (~42 V) supera el máximo absoluto del AP63203 (35 V DC). Protege contra ESD, no contra transitorios largos |
 | Fusible F1 | 0451005.MRL (5 A): verificar tensión nominal ≥ 32 V en el datasheet |
 | SMF3.3 | Verificar el sufijo exacto (SMF3.3A) |
@@ -57,6 +57,22 @@ La Tabla 2 del datasheet de Diodes sugiere 3.9 µH para la versión de 3.3 V. Se
 
 **Justificación:** la carga real es de unos 0.6 A, y el datasheet recomienda más inductancia para mejor eficiencia a carga ligera. El ciclo de trabajo es de 13–18 %, lejos del 50 % donde aparece la oscilación subarmónica en modo corriente. El rizado de salida es menor que con 3.9 µH. El componente pasa a categoría **A** (reutilizado sin cambios).
 
+### Variante del monitor BQ76930 (U1): BQ7693002DBTR
+
+Según la tabla de variantes del datasheet de TI (SLUSBK2I):
+
+| Variante | Dirección I2C | REGOUT | CRC |
+|---|---|---|---|
+| BQ7693000 / 01 | 0x08 | 2.5 V | No / Sí |
+| **BQ7693002** | **0x08** | **3.3 V** | **No** |
+| BQ7693003 | 0x08 | 3.3 V | Sí |
+
+Se elige **BQ7693002DBTR**:
+- Su REGOUT de 3.3 V coincide con el bus I2C de 3.3 V del ESP32.
+- Sin CRC, el firmware es más simple.
+- Tiene stock en LCSC (C2871830).
+- Su pinout es idéntico al de la BQ7693003.
+
 ## 5. Fuera del alcance de esta revisión
 
 - **Firmware:** no escrito. Modo Sport, curvas de acelerador, failsafe y comunicación con el cargador, el monitor y la IMU quedan pendientes.
@@ -75,7 +91,7 @@ La Tabla 2 del datasheet de Diodes sugiere 3.9 µH para la versión de 3.3 V. Se
 - [ ] Revisar o mejorar el plano GND de In1
 - [ ] Verificar el pinout y el ancho del DevKit real
 - [x] Verificar el inductor del AP63203 (ver sección 4)
-- [ ] Confirmar la variante del BQ76930
+- [x] Confirmar la variante del BQ76930 (BQ7693002DBTR, ver sección 4)
 - [ ] Revisión del diseño por el profesor o un tercero
 - [ ] Ajustar el tamaño de la placa al chasis
 - [ ] Regenerar los archivos de fabricación y cambiar el estado a "candidato a producción"
