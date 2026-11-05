@@ -44,14 +44,3 @@
 | D | Bloques de la referencia que no aplican (RS-485, 0–10 V, 4–20 mA, relés, E/S industriales, EnergyMeter) | 0 en placa |
 
 El detalle por pieza está en `documentacion/BOM_revD.csv`.
-
-## Cómo regenerar
-
-Requiere KiCad 9 en `C:\Program Files\KiCad\9.0`; los scripts usan su Python.
-
-1. `scripts/design_d.py`: diseño fuente (componentes, valores, conexiones).
-2. `mksym.py` genera la librería CDJ; `fastgen.py` genera el esquemático; `pcbgen_d.py` genera la PCB.
-3. El ruteo se hizo con FreeRouting 2.5.0 (`dsn.py` → FreeRouting → `ses.py`), seguido de `fix2.py` y `maze.py`.
-4. `fab.sh` genera los archivos de fabricación.
-
-Los scripts tienen rutas de esta PC; hay que ajustarlas si se usan en otra.
