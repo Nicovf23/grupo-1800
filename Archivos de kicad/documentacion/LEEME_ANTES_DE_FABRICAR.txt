@@ -5,6 +5,7 @@ ESTADO: EN DESARROLLO - no es version de produccion.
 
 RUTEO COMPLETO (11-nov-2026): DRC con 0 errores, 0 conexiones sin rutear, 0 diferencias con el esquematico.
 Los pasivos del cargador U5 (BQ25756) quedaron a 2.0-2.6 mm del chip (antes 25-45 mm).
+Plano de GND tambien en la capa superior, con vias de cosido junto a los componentes de potencia.
 
 !!! NO PEDIR TODAVIA: faltan las verificaciones de AUDITORIA.md (seccion 2 y checklist) !!!
 

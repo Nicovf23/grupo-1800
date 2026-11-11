@@ -23,7 +23,7 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 
 | # | Problema | Impacto | Cómo resolver |
 |---|---|---|---|
-| 1 | **Ruteo del cargador sin revisión visual**: la zona de U5 se completó con herramientas automáticas y ajustes por coordenadas; pasa el DRC pero nadie la ha revisado en pantalla | Posibles recorridos poco limpios en pistas de potencia o de sensado | Abrir la PCB en KiCad y revisar la zona del BQ25756 (lazo de potencia, SRP/SRN, ACP/ACN) |
+| 1 | **Ruteo del cargador revisado solo por imágenes**: la zona de U5 se completó con herramientas automáticas; pasa el DRC y se revisó en renders (ahí se detectaron y corrigieron los retornos de masa finos), pero falta la revisión de una persona en KiCad | Posibles recorridos mejorables: nodos de conmutación con pista de 1 mm, líneas de sensado SRP/SRN y ACP/ACN | Abrir la PCB en KiCad y revisar la zona del BQ25756 |
 | 2 | **Plano de GND en In1 fragmentado**: el autorouter usó In1 para señales (unos 1.8 m de pista) | Más ruido para la IMU y el ADC. B.Cu sí tiene GND casi continuo | Reubicar componentes del cargador y volver a rutear con In1 reservado, o rutear a mano |
 | 3 | **Orden de pines del DevKit V1 sin verificar físicamente** | Si el clon difiere, conexiones cruzadas | Comparar la serigrafía del DevKit real con `documentacion/PINES_DEVKIT_revD.csv` |
 | 4 | **Ancho entre filas del DevKit desconocido** (22.86 o 25.4 mm según el clon) | El zócalo no encaja | La huella trae ambas filas; medir el DevKit real y soldar en la fila correcta |
@@ -92,6 +92,13 @@ Otros cambios de este ruteo:
 - 6 vías a GND dentro del pad térmico del BQ25756 (antes dependía de una sola vía externa).
 - Junto a los pines de U5 se usaron 5 vías de 0.45/0.2 mm y tramos de 0.15 mm para poder sacar todas las señales.
 
+### Retornos de masa de la etapa de potencia
+
+Al revisar el ruteo se vio que el autorouter había conectado a masa los MOSFET Q2/Q3, los condensadores de entrada y salida del cargador y los electrolíticos con pistas de 0.2 mm. Se corrigió así:
+- Plano de GND en F.Cu en toda la placa (107 de 108 pads SMD de GND quedan dentro del plano, con conexión sólida).
+- Vías de cosido de 0.8/0.4 mm junto a los pads de GND de potencia (4 por MOSFET, 2 por condensador) y una rejilla de vías de 0.6/0.3 mm cada 6 mm.
+- DRC después del cambio: 0 errores, 0 conexiones sin rutear.
+
 ### Inductor del cargador (L2): IHLP4040DZER100M5A
 
 El inductor del cargador pasó del IHLP-6767 (17 × 17 mm) al Vishay IHLP4040DZER100M5A (10 µH, 6.5 A, DCR 30.9 mΩ, LCSC C511353), de unos 10 × 10 mm. Con 3 A de entrada y 2 A de carga, el pico de corriente en el inductor ronda 3.5 A, por debajo de los 6.5 A nominales. Pérdida en el DCR: unos 0.28 W a 3 A.
@@ -113,7 +120,7 @@ No son avisos de DRC, pero conviene saberlo: hay 4 tramos cortos de 0.10–0.12 
 
 - [x] Rutear todas las conexiones y obtener DRC con 0 "sin conectar" (ver sección 4)
 - [ ] Revisar visualmente en KiCad el ruteo alrededor del BQ25756
-- [ ] Confirmar con el fabricante vías de 0.45/0.2 mm en 4 capas
+- [ ] Confirmar en la cotización del fabricante que las vías de 0.45/0.2 mm no añaden costo (la página de capacidades de JLCPCB da 0.2 mm como taladro mínimo en multicapa)
 - [ ] Revisar o mejorar el plano GND de In1
 - [ ] Verificar el pinout y el ancho del DevKit real
 - [x] Verificar el inductor del AP63203 (ver sección 4)
