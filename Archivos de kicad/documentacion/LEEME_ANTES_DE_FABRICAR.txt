@@ -3,16 +3,20 @@ CARRITO DON JULIO - PLACA PRINCIPAL REV D (LiPo 6S + ESP32 DevKit V1)
 Placa 130 x 100 mm, 4 capas, 204 componentes. DevKit V1 en zocalo (2 tiras hembra 1x15).
 ESTADO: EN DESARROLLO - no es version de produccion.
 
-!!! NO PEDIR TODAVIA: falta 1 conexion junto al cargador U5 (BQ25756), rutear a mano en KiCad !!!
- /CHG_SW1 : U5 pin 28 (77.28, 12.40 mm) -> pista existente en (58.21, 11.95 mm)
-            (pin de nodo de conmutacion SW1 del cargador: pista corta y directa, idealmente >= 0.3 mm)
-Como: abrir cdj_revD.kicad_pro -> Editor PCB -> tecla X en el pin 28 de U5; el router "Empujar" abre paso.
-Luego: Inspeccionar -> DRC (0 "sin conectar") y regenerar los archivos de fabricacion.
+RUTEO COMPLETO (11-nov-2026): DRC con 0 errores, 0 conexiones sin rutear, 0 diferencias con el esquematico.
+Los pasivos del cargador U5 (BQ25756) quedaron a 2.0-2.6 mm del chip (antes 25-45 mm).
+
+!!! NO PEDIR TODAVIA: faltan las verificaciones de AUDITORIA.md (seccion 2 y checklist) !!!
+
+AL PEDIR LA PLACA (4 capas):
+ - Via minima 0.45 mm con taladro 0.2 mm (5 vias junto a U5). Confirmar que el fabricante la acepta sin sobrecosto.
+ - Pista minima 0.1 mm (4 tramos cortos); la mayoria de las senales van a 0.15-0.2 mm.
+ - 6 vias dentro del pad termico de U5 (via-in-pad sin tapar): al soldar, algo de estano baja por ellas.
 
 ANTES DE SOLDAR EL ZOCALO:
  - Verificar el orden de pines de TU DevKit contra PINES_DEVKIT_revD.csv (EN arriba-izq junto a la antena, 3V3 abajo-der junto al USB).
  - Fila derecha doble (22.86 y 25.4 mm): soldar la tira hembra en la que coincida con tu DevKit.
  - No conectar el USB del DevKit con la bateria desconectada y JP1 cerrado (retroalimentacion del regulador del DevKit).
 
-Avisos DRC aceptados: serigrafia (cosmetico), 7 vias sobrantes, 7 alivios termicos con 1 radio,
-2 tramos de 0.1 mm en CHG_DRV (< 1 mm; JLCPCB admite 0.09 mm).
+Avisos DRC aceptados: solo serigrafia (cosmetico).
+5 pads GND pasantes (J13, J14, J20, pines 14 y 29 del DevKit) tienen conexion solida al plano: necesitan mas calor al soldar.

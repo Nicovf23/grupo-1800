@@ -1,9 +1,9 @@
 # Carrito Don Julio: placa principal (KiCad)
 
 > ⚠️ **ESTADO: EN DESARROLLO. NO ES UNA VERSIÓN DE PRODUCCIÓN.**
-> No mandar a fabricar todavía. Faltan 3 conexiones por rutear y varias verificaciones físicas (ver [AUDITORIA.md](AUDITORIA.md)).
+> El ruteo está completo (DRC: 0 errores, 0 conexiones sin rutear), pero no mandar a fabricar todavía: faltan verificaciones físicas y una revisión del diseño (ver [AUDITORIA.md](AUDITORIA.md)).
 
-**Revisión:** D (5 de noviembre de 2026)
+**Revisión:** D, ruteo 3 (11 de noviembre de 2026)
 **Herramienta:** KiCad 9.0
 **Vehículo:** RC 1:7, 4WD, batería LiPo 6S (22.2 V nominal / 25.2 V cargada)
 

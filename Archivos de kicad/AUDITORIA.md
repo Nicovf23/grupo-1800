@@ -1,6 +1,6 @@
 # Auditoría del diseño: revisión D
 
-**Fecha:** 5 de noviembre de 2026
+**Fecha:** 11 de noviembre de 2026
 **Estado:** 🟡 **EN DESARROLLO**, no apto para producción.
 
 Esta auditoría separa lo que se **verificó con herramientas** de lo que **no se ha verificado**. Nada de esta placa se ha fabricado ni probado en hardware.
@@ -14,7 +14,8 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 | Netlist del esquemático contra la lista de conexiones del diseño, pin por pin | Netlist exportada con `kicad-cli` | **575 de 575 pines correctos**, sin redes fusionadas |
 | ERC (reglas eléctricas del esquemático) | `kicad-cli sch erc` | **0 errores.** 2 avisos esperados: pines de la IMU atados a GND a propósito |
 | Paridad esquemático ↔ PCB | `kicad-cli pcb drc --schematic-parity` | **0 diferencias** |
-| Separaciones, cortos y bordes en la PCB | `kicad-cli pcb drc` | **0 errores de separación ni cortos** |
+| Separaciones, cortos y bordes en la PCB | `kicad-cli pcb drc` | **0 errores** (solo avisos de serigrafía) |
+| Conexiones ruteadas | `kicad-cli pcb drc` | **0 conexiones sin rutear** |
 | Huellas | Bibliotecas oficiales de KiCad 9 | Todas existen. La huella QFN-36 del BQ25756 se comparó pad por pad con el dibujo RRV0036A de TI |
 | Pines de los integrados | Datasheets oficiales | Tomados de las tablas de pines (TI, Diodes, Infineon, WCH, ST, onsemi) |
 
@@ -22,8 +23,8 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 
 | # | Problema | Impacto | Cómo resolver |
 |---|---|---|---|
-| 1 | **1 conexión sin rutear** junto a U5 (BQ25756): CHG_SW1, pin 28 | La placa no funcionaría | Rutear a mano en KiCad con el router "Empujar". Coordenadas en `documentacion/LEEME_ANTES_DE_FABRICAR.txt` |
-| 2 | **Plano de GND en In1 fragmentado**: el autorouter usó In1 para señales | Más ruido para la IMU y el ADC. B.Cu sí tiene GND casi continuo | Reubicar componentes del cargador y volver a rutear con In1 reservado, o rutear a mano |
+| 1 | **Ruteo del cargador sin revisión visual**: la zona de U5 se completó con herramientas automáticas y ajustes por coordenadas; pasa el DRC pero nadie la ha revisado en pantalla | Posibles recorridos poco limpios en pistas de potencia o de sensado | Abrir la PCB en KiCad y revisar la zona del BQ25756 (lazo de potencia, SRP/SRN, ACP/ACN) |
+| 2 | **Plano de GND en In1 fragmentado**: el autorouter usó In1 para señales (unos 1.8 m de pista) | Más ruido para la IMU y el ADC. B.Cu sí tiene GND casi continuo | Reubicar componentes del cargador y volver a rutear con In1 reservado, o rutear a mano |
 | 3 | **Orden de pines del DevKit V1 sin verificar físicamente** | Si el clon difiere, conexiones cruzadas | Comparar la serigrafía del DevKit real con `documentacion/PINES_DEVKIT_revD.csv` |
 | 4 | **Ancho entre filas del DevKit desconocido** (22.86 o 25.4 mm según el clon) | El zócalo no encaja | La huella trae ambas filas; medir el DevKit real y soldar en la fila correcta |
 | 5 | **Retroalimentación del DevKit**: se alimenta por su pin 3V3 | Con USB conectado, sin batería y JP1 cerrado, su regulador alimenta la placa al revés | Abrir JP1 al programar en banco, o agregar un diodo o interruptor |
@@ -39,6 +40,7 @@ Esta auditoría separa lo que se **verificó con herramientas** de lo que **no s
 | Fusible F1 | 0451005.MRL (5 A): verificar tensión nominal ≥ 32 V en el datasheet |
 | SMF3.3 | Verificar el sufijo exacto (SMF3.3A) |
 | Resistencias de LED | 1.1k/1.2k en 2512 dimensionadas para 1 LED a 25.2 V (0.45 W) |
+| Camino de VBUS | Del USB-C a R17 va por un plano en F.Cu más un plano en In2 cosidos con 6 vías. Capacidad de corriente a 3 A no calculada |
 | Térmica | Sin análisis térmico. Placa 130 × 100 mm, 4 capas |
 
 ## 4. Puntos resueltos
@@ -73,9 +75,22 @@ Se elige **BQ7693002DBTR**:
 - Tiene stock en LCSC (C2871830).
 - Su pinout es idéntico al de la BQ7693003.
 
-### Congestión alrededor del cargador: de 3 conexiones pendientes a 1
+### Cargador recolocado y ruteo completo (11 de noviembre de 2026)
 
-Se reubicaron los componentes del cargador con 4 mm de holgura alrededor del BQ25756 y más separación entre sus pasivos, y se volvió a rutear. Quedan 436 − 1 conexiones ruteadas, sin errores de separación.
+Se recolocaron a mano los componentes del cargador para dejar los pasivos críticos junto al BQ25756 y se volvió a rutear toda la placa. Resultado: 0 conexiones sin rutear y 0 errores de DRC.
+
+| Componente | Distancia al pin de U5 antes | Ahora |
+|---|---|---|
+| C29 (REGN) | 45 mm | 2.0 mm |
+| C27 (bootstrap 1) | 33 mm | 2.3 mm |
+| C28 (bootstrap 2) | 29 mm | 2.6 mm |
+| C30 (DRV_SUP) | 25 mm | 2.4 mm |
+| C35/C36 (filtro SRP/SRN) | ~30 mm | 6–7 mm |
+
+Otros cambios de este ruteo:
+- VBUS: plano en F.Cu entre el USB-C y R17, y plano en In2 bajo el cargador, cosidos con 6 vías.
+- 6 vías a GND dentro del pad térmico del BQ25756 (antes dependía de una sola vía externa).
+- Junto a los pines de U5 se usaron 5 vías de 0.45/0.2 mm y tramos de 0.15 mm para poder sacar todas las señales.
 
 ### Inductor del cargador (L2): IHLP4040DZER100M5A
 
@@ -91,13 +106,14 @@ El inductor del cargador pasó del IHLP-6767 (17 × 17 mm) al Vishay IHLP4040DZE
 ## 6. Avisos de DRC aceptados (no afectan el funcionamiento)
 
 - Serigrafía superpuesta o sobre cobre (cosmético).
-- 7 vías sobrantes (agujeros sin conexión eléctrica; se pueden borrar en KiCad).
-- 2 tramos de 0.1 mm en CHG_DRV (< 1 mm de largo; dentro de la capacidad de JLCPCB, 0.09 mm).
-- 7 alivios térmicos con un solo radio en pads de GND.
+
+No son avisos de DRC, pero conviene saberlo: hay 4 tramos cortos de 0.10–0.12 mm de ancho, y 5 pads GND pasantes (J13, J14, J20, pines 14 y 29 del DevKit) con conexión sólida al plano, que necesitan más calor al soldar.
 
 ## 7. Checklist para pasar a producción
 
-- [ ] Rutear la conexión pendiente (CHG_SW1) y obtener DRC con 0 "sin conectar"
+- [x] Rutear todas las conexiones y obtener DRC con 0 "sin conectar" (ver sección 4)
+- [ ] Revisar visualmente en KiCad el ruteo alrededor del BQ25756
+- [ ] Confirmar con el fabricante vías de 0.45/0.2 mm en 4 capas
 - [ ] Revisar o mejorar el plano GND de In1
 - [ ] Verificar el pinout y el ancho del DevKit real
 - [x] Verificar el inductor del AP63203 (ver sección 4)
