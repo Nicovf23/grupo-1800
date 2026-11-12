@@ -27,7 +27,7 @@
 |---|---|
 | `proyecto_revD/` | Proyecto KiCad editable: esquemático, PCB, librería propia `CDJ` (símbolos y huellas) |
 | `fabricacion_PRELIMINAR/` | Gerbers, taladros, BOM, posiciones (CPL) y modelo STEP. **Preliminares, no fabricar** |
-| `documentacion/` | Esquemático en PDF, vista 3D, BOM clasificada (A/B/C), mapa de pines del DevKit, instrucciones |
+| `documentacion/` | Esquemático en PDF, vista 3D, BOM clasificada (A/B/C), mapa de pines del DevKit, instrucciones y `EXPLICACION_PLACA.md` (qué hace cada componente y cada parte del PCB) |
 | `reportes/` | Informes ERC, DRC y verificación de la netlist |
 | `AUDITORIA.md` | Qué está verificado, qué no, y qué falta para producción |
 | `NOTAS_DISENO.md` | Decisiones de diseño, supuestos y cálculos |
