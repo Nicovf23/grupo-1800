@@ -1,0 +1,25 @@
+(version 1)
+# JLCPCB 4 capas 1 oz / 0.5 oz -- generado por generador/pcb_fab.py
+(rule "In1 = plano GND solido: sin pistas ni vias de otras redes en zona"
+	(layer "In1.Cu")
+	(condition "A.Type == 'Track'")
+	(constraint disallow track))
+(rule "RF 50 ohm coplanar: gap 8 mil al vertido"
+	(condition "A.NetClass == 'RF_50' && B.Type == 'Zone'")
+	(constraint clearance (min 0.2032mm)))
+(rule "USB 90 ohm: vertido a 0.5 mm del par"
+	(condition "A.NetClass == 'USB_90' && B.Type == 'Zone'")
+	(constraint clearance (min 0.5mm)))
+(rule "Paso fino dentro de la huella (LGA-14 y VSSOP-8 0.5 mm, red RF 0201): limitado por el encapsulado"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && (A.memberOfFootprint('U7') || A.memberOfFootprint('U13') || A.memberOfFootprint('L5') || A.memberOfFootprint('C116') || A.memberOfFootprint('C117') || A.memberOfFootprint('C118') || A.memberOfFootprint('R111'))")
+	(constraint clearance (min 0.1mm)))
+(rule "JLC: PTH anillo"
+	(condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+	(constraint annular_width (min 0.18mm)))
+(rule "JLC: taladro de pad a taladro de pad"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad'")
+	(constraint hole_to_hole (min 0.45mm)))
+(rule "JLC: pad a serigrafia"
+	(layer outer)
+	(condition "A.Type == 'Pad' && (B.Type == 'Text' || B.Type == 'Graphic')")
+	(constraint silk_clearance (min 0.15mm)))

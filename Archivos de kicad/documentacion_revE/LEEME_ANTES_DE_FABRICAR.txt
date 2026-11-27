@@ -1,0 +1,23 @@
+CARRITO DON JULIO - PLACA PRINCIPAL REV E (LiPo 6S + ESP32-S3RH2)
+=================================================================
+Proyecto KiCad 10 (NO abre en KiCad 9). 125 x 95 mm, 4 capas JLC04161H-7628.
+ESTADO: PRELIMINAR - esquemático completo; PCB colocada con 73 conexiones SIN RUTEAR. NO fabricado.
+
+!!! NO PEDIR TODAVÍA !!!
+Antes de fabricar:
+ 1. Revisar a mano en KiCad la zona del cargador (U19 BQ25756 / Q1-Q4 / L2): los nodos
+    CHG_SW1/CHG_SW2 quedaron largos en la colocación automática.
+ 2. Confirmar en el visor 3D la orientación de J1/J16 (XT30) y J3/J6 (USB-C).
+ 3. Elegir MPN de: F2, FB1, FB2, cristal Y1 (40 MHz +-10 ppm, CL 10 pF). Confirmar la flash
+    W25Q128JVSIQ con Espressif.
+ 4. Revisión del diseño por el profesor o un tercero.
+ 5. Ver docs/CAMBIOS_revE.md (lo no verificado) y docs/PLAN_PRUEBAS_HW_RF.md.
+
+SEGURIDAD:
+ - La corriente del motor NO pasa por esta placa: batería -> ESC por XT90 a XT90 (AWG10).
+ - El BQ76930 NO es un BMS: configurar el corte por bajo voltaje (LVC) del ESC.
+ - Primera prueba del failsafe con el motor desconectado (PLAN_PRUEBAS fase 3).
+ - Cargar con supervisión y NTC conectado; al principio usar un cargador balanceador externo.
+
+Documentación: carpeta docs/ (auditoría, diagrama, GPIO, BOM, cálculos, plan de pruebas, ERC/DRC).
+Regenerar: ver docs/CAMBIOS_revE.md, sección "Cómo regenerar".

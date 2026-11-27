@@ -1,5 +1,31 @@
 # Carrito Don Julio: placa principal (KiCad)
 
+## Revisión E (nueva, 26-11-2026): PRELIMINAR
+
+> ⚠️ **REV E EN DESARROLLO.** Esquemático completo (ERC: 0 errores). PCB colocada y casi ruteada: DRC 0 errores, **73 conexiones sin rutear** todavía. **No mandar a fabricar.**
+
+| | |
+|---|---|
+| Microcontrolador | **ESP32-S3RH2 soldado** (QFN56) + flash W25Q128JV 16 MB + cristal 40 MHz + antena U.FL |
+| Alimentación | 6S → **LMR36510** (5.42 V) → OR con USB → **AP63203** (3.3 V) |
+| Programación | USB-C de datos propio (el otro USB-C sigue siendo solo de carga) |
+| Seguridad | Failsafe por hardware (monoestable 74LVC1G123 + interruptor de armado) |
+| PCB | 125 × 95 mm, 4 capas JLC04161H-7628, In1 = GND sólido |
+| Herramienta | **KiCad 10** (no abre en KiCad 9) |
+
+| Carpeta | Contenido |
+|---|---|
+| `proyecto_revE/` | Proyecto KiCad 10: abrir `cdj_revE.kicad_pro` |
+| `documentacion_revE/` | Esquemático PDF, BOM, GPIO, cálculos, auditoría, plan de pruebas, ERC/DRC, imágenes |
+| `fabricacion_revE_PRELIMINAR/` | Gerbers, taladros, BOM, CPL, STEP. **Preliminares, no fabricar** |
+| `../Documentación/Informe técnico Carrito Don Julio (rev E).pdf` | Informe completo para explicar y entregar |
+
+La rev D (abajo) se conserva como respaldo.
+
+---
+
+## Revisión D
+
 > ⚠️ **ESTADO: EN DESARROLLO. NO ES UNA VERSIÓN DE PRODUCCIÓN.**
 > El ruteo está completo (DRC: 0 errores, 0 conexiones sin rutear), pero no mandar a fabricar todavía: faltan verificaciones físicas y una revisión del diseño (ver [AUDITORIA.md](AUDITORIA.md)).
 

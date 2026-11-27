@@ -1,0 +1,30 @@
+ERC report (2026-11-13T01:26:14, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+
+***** Sheet /Potencia: entrada 6S, 5 V y 3.3 V/
+
+***** Sheet /MCU ESP32-S3RH2, flash, reloj, arranque, USB y RF/
+
+***** Sheet /E/S: IMU, receptor RC, failsafe ESC/servo, luces, sensores/
+[pin_to_pin]: Pins of type Bidirectional and Power output are connected
+    ; warning
+    @(40.64 mm, 77.47 mm): Symbol U7 Pin 1 [SDO/SA0, Bidirectional, Line]
+    @(64.77 mm, 69.85 mm): Symbol #PWR006 Pin 1 [Power output, Line]
+[pin_to_pin]: Pins of type Bidirectional and Power output are connected
+    ; warning
+    @(40.64 mm, 80.01 mm): Symbol U7 Pin 2 [SDX, Bidirectional, Line]
+    @(64.77 mm, 69.85 mm): Symbol #PWR006 Pin 1 [Power output, Line]
+
+***** Sheet /Cargador USB-C PD: CH224K + BQ25756 (de rev D)/
+
+***** Sheet /Monitor 6S BQ7693002 (de rev D) y mecanico/
+
+ ** ERC messages: 2  Errors 0  Warnings 2
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

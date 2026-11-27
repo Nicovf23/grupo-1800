@@ -1,0 +1,58 @@
+pin_qfn56,nombre_chip,gpio,red,funcion,direccion,estado_en_reset_y_arranque,restriccion_datasheet,notas
+1,LNA_IN,-,RF_LNA,Antena 2.4 GHz (CLC + U.FL),RF,-,-,Red C116/L5/C117 a ajustar con VNA
+2,VDD3P3,-,VDD3P3_A,Alimentacion analogica,Pwr,-,-,FB2 + C102/C103/C104
+3,VDD3P3,-,VDD3P3_A,Alimentacion analogica,Pwr,-,-,
+4,CHIP_PU,-,CHIP_PU,Reset/encendido (RC 10k/1uF + TPS3839K33 via BAT54WS + SW1),In,-,No dejar flotante (guia),TP101
+5,GPIO0,0,BOOT_IO0,Boton BOOT (SW2) + pull-up 10k,In,Pull-up -> arranque SPI,Strapping (DS 3),TP102. Pulsado al reset = modo descarga
+6,GPIO1,1,NTC_MOTOR,ADC1_CH0 temperatura motor,AnalogIn,Alta Z,-,Divisor 10k/NTC 10k
+7,GPIO2,2,NTC_ESC,ADC1_CH1 temperatura ESC,AnalogIn,Alta Z,-,Divisor 10k/NTC 10k
+8,GPIO3,3,NC,Libre (strapping JTAG),-,-,Strapping (DS 3),Sin conectar a proposito
+9,GPIO4,4,VBAT_SENSE,ADC1_CH3 tension de pack,AnalogIn,Alta Z,-,100k/12k: 25.2 V -> 2.70 V
+10,GPIO5,5,RC_CH1,PWM receptor canal 1 (buffer 1G125),In,Alta Z,-,
+11,GPIO6,6,RC_CH2,PWM receptor canal 2,In,Alta Z,-,
+12,GPIO7,7,RC_CH3,PWM receptor canal 3,In,Alta Z,-,
+13,GPIO8,8,I2C_SDA,I2C: BQ76930 0x08 / LSM6DSL 0x6A / BQ25756 0x6B,I/O OD,Alta Z (pull-up 4.7k),-,
+14,GPIO9,9,I2C_SCL,I2C reloj,Out OD,Alta Z (pull-up 4.7k),-,
+15,GPIO10,10,IMU_INT1,Interrupcion IMU,In,Alta Z,-,
+16,GPIO11,11,ESC_PWM,Pulso acelerador/freno al ESC (via 1G126),Out,Alta Z -> OE apagado,-,Solo llega al ESC si FS_OK=1
+17,GPIO12,12,SERVO_PWM,Pulso servo direccion (via 1G126),Out,Alta Z -> OE apagado,-,
+18,GPIO13,13,FS_HEARTBEAT,Latido para el monoestable failsafe (>=100 Hz),Out,Alta Z + pull-down 100k -> sin latido,-,Si se para: FS_OK cae en ~47 ms (Rext x Cext; verificar)
+19,GPIO14,14,ARM_SW,Lectura del interruptor de armado (tambien CLR del 1G123),In,Pull-down 10k = desarmado,-,
+20,VDD3P3_RTC,-,+3V3,Alimentacion RTC,Pwr,-,>= 3.0 V con flash 3.3 V (guia),C105
+21,GPIO15,15,SPORT_BTN,Boton autorizacion modo Sport,In,Pull-up 10k,XTAL_32K_P (sin cristal 32k),Firmware exige boton + confirmacion
+22,GPIO16,16,AFE_ALERT,Alerta BQ76930,In,Pull-down 1M,XTAL_32K_N,
+23,GPIO17,17,RC_UART_TX,UART1 TX hacia receptor CRSF/ELRS,Out,Alta Z,-,220R serie
+24,GPIO18,18,RC_UART_RX,UART1 RX desde receptor,In,Alta Z,-,Buffer 1G125
+25,GPIO19,19,USB_D_N,USB D- nativo (Serial/JTAG),USB,USB,Reservado USB,R110 22R + USBLC6
+26,GPIO20,20,USB_D_P,USB D+ nativo,USB,USB_PU,Reservado USB,R109 22R. Glitch ~60 us en arranque (guia)
+27,GPIO21,21,AFE_BOOT,Pulso de arranque del BQ76930 (TS1),Out,Alta Z,-,
+28,SPICS1,26,NC,PSRAM interna (CE#),-,-,P4: no usar (DS 2.3.5),
+29,VDD_SPI,-,VDD_SPI,Alimentacion flash 3.3 V (RSPI desde VDD3P3_RTC),Pwr out,-,-,C109/C110/C111
+30,SPIHD,27,FL_IO3,Flash IO3,SPI,-,P4,
+31,SPIWP,28,FL_IO2,Flash IO2,SPI,-,P4,
+32,SPICS0,29,FL_CS,Flash CS#,SPI,-,P4,R103 pull-up 10k
+33,SPICLK,30,FL_CLK,Flash CLK,SPI,-,P4,
+34,SPIQ,31,FL_IO1,Flash IO1,SPI,-,P4,
+35,SPID,32,FL_IO0,Flash IO0,SPI,-,P4,
+36,SPICLK_N,48,EXP_IO48,Expansion J25,I/O,Alta Z,Dominio VDD_SPI (3.3 V en RH2),
+37,SPICLK_P,47,EXP_IO47,Expansion J25,I/O,Alta Z,Dominio VDD_SPI,
+38,GPIO33,33,LT_FRONT,Luces delanteras (BTS723 IN1 U16),Out,Alta Z (luz apagada),Libre con PSRAM Quad (DS 2.3.5),
+39,GPIO34,34,LT_REAR,Luces traseras,Out,Alta Z,Libre con Quad,
+40,GPIO35,35,LT_SPORT,Luces modo Sport,Out,Alta Z,Libre con Quad,
+41,GPIO36,36,LT_AUX,Luz freno/aux,Out,Alta Z,Libre con Quad,
+42,GPIO37,37,LT_ST_A,Diagnostico BTS723 U16,In,Pull-up 47k,Libre con Quad,
+43,GPIO38,38,LT_ST_B,Diagnostico BTS723 U17,In,Pull-up 47k,-,
+44,MTCK,39,CHG_CE,Habilitacion cargador BQ25756 (activo bajo),Out,Pull-down 10k = carga habilitada,JTAG (libre usando USB-JTAG),
+45,MTDO,40,CHG_INT,Interrupcion cargador,In,Pull-up 10k,JTAG,
+46,VDD3P3_CPU,-,+3V3,Alimentacion digital,Pwr,-,-,C106
+47,MTDI,41,LED_STATUS,LED de estado azul,Out,Alta Z,JTAG,
+48,MTMS,42,EXP_IO42,Expansion J25,I/O,Alta Z,JTAG,
+49,U0TXD,43,U0TXD,UART0 consola (pad TP103),Out,Consola de arranque,UART0 (DS 2.3.5),R102 499R
+50,U0RXD,44,U0RXD,UART0 consola (pad TP104),In,-,UART0,
+51,GPIO45,45,GPIO45_STRAP,Strapping VDD_SPI,In,Pull-down 10k -> VDD_SPI 3.3 V,Strapping,No usar
+52,GPIO46,46,NC,Strapping modo arranque,-,Pull-down interno,Strapping,Sin conectar
+53,XTAL_N,-,XTAL_N,Cristal 40 MHz,-,-,Solo 40 MHz (guia),C113
+54,XTAL_P,-,XTAL_P_MCU,Cristal 40 MHz via L4 24 nH,-,-,Serie 24 nH (guia),C112
+55,VDDA,-,+3V3,Analogica,Pwr,-,-,C107/C108
+56,VDDA,-,+3V3,Analogica,Pwr,-,-,
+57,EPAD,-,GND,Masa y disipacion,Pwr,-,-,Vias al plano In1

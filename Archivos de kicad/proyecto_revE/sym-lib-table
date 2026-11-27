@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CDJ_revE")(type "KiCad")(uri "${KIPRJMOD}/CDJ_revE.kicad_sym")(options "")(descr "Simbolos propios Carrito Don Julio rev E"))
+)

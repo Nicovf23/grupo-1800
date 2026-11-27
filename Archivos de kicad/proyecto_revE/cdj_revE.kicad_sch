@@ -1,0 +1,273 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f529f065-1889-57d9-9492-b0b5109b8bc5")
+	(paper "A4")
+	(title_block
+		(title "Carrito Don Julio rev E")
+		(date "2026-11-13")
+		(rev "E")
+		(company "Carrito Don Julio (grupo 1800)")
+		(comment 1 "Hoja raiz: bloques de la rev E (diagrama en docs/diagrama_bloques_revE.png)")
+	)
+	(lib_symbols
+	)
+	(text "Senales entre hojas: etiquetas globales. Rieles: +BATT, +5V, +3V3, VBUS, GND."
+		(exclude_from_sim no)
+		(at 39.37 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "34a8c561-0103-5fd8-9728-804b9b02f3df")
+	)
+	(text "Rev E - PRELIMINAR. Generado por generador/gen_revE.py (no editar a mano)."
+		(exclude_from_sim no)
+		(at 39.37 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b86418c9-687d-5d32-aaa8-e7235843eda4")
+	)
+	(sheet
+		(at 191.77 73.66)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2e87cfb1-2e96-58f6-9110-a0108040f754")
+		(property "Sheetname" "E/S: IMU, receptor RC, failsafe ESC/servo, luces, sensores"
+			(at 191.77 72.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "03-es.kicad_sch"
+			(at 191.77 90.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "cdj_revE"
+				(path "/f529f065-1889-57d9-9492-b0b5109b8bc5"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 110.49 73.66)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "301da4ee-9b8c-5fec-a597-28779de4c4e9")
+		(property "Sheetname" "MCU ESP32-S3RH2, flash, reloj, arranque, USB y RF"
+			(at 110.49 72.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "02-mcu.kicad_sch"
+			(at 110.49 90.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "cdj_revE"
+				(path "/f529f065-1889-57d9-9492-b0b5109b8bc5"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 191.77 104.14)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3451b15e-1707-502d-8587-541bcac8cec9")
+		(property "Sheetname" "Monitor 6S BQ7693002 (de rev D) y mecanico"
+			(at 191.77 103.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "05-monitor6s.kicad_sch"
+			(at 191.77 120.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "cdj_revE"
+				(path "/f529f065-1889-57d9-9492-b0b5109b8bc5"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 110.49 104.14)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "50aea933-fb54-5269-bb91-0391ff0115e8")
+		(property "Sheetname" "Cargador USB-C PD: CH224K + BQ25756 (de rev D)"
+			(at 110.49 103.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "04-cargador.kicad_sch"
+			(at 110.49 120.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "cdj_revE"
+				(path "/f529f065-1889-57d9-9492-b0b5109b8bc5"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 73.66)
+		(size 50.8 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a6921e99-3061-535b-b503-f11b22075c88")
+		(property "Sheetname" "Potencia: entrada 6S, 5 V y 3.3 V"
+			(at 39.37 72.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "01-potencia.kicad_sch"
+			(at 39.37 90.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "cdj_revE"
+				(path "/f529f065-1889-57d9-9492-b0b5109b8bc5"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

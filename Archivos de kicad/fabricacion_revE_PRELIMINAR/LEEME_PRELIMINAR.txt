@@ -1,0 +1,4 @@
+ARCHIVOS PRELIMINARES - NO FABRICAR
+Generados 2026-11-15 10:24 desde cdj_revE.kicad_pcb (KiCad 10).
+Faltan: revisión manual del cargador, orientación XT30/USB-C en 3D, MPN pendientes, revisión del profesor.
+Ver ../../LEEME_ANTES_DE_FABRICAR.txt y ../../docs/CAMBIOS_revE.md
